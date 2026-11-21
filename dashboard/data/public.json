@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T20:47:20.405Z",
+  "generatedAt": "2026-11-21T20:56:14.510Z",
   "chainId": "qorechain-diana",
   "rollup": {
     "id": "ledgerpump",
@@ -9,7 +9,7 @@
     "creator": "qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn"
   },
   "inbox": {
-    "head": 18,
+    "head": 19,
     "consumed": 18
   },
   "treasuryQor": "17",
@@ -237,6 +237,10 @@
     {
       "seq": 18,
       "kind": "ledger_tx"
+    },
+    {
+      "seq": 19,
+      "kind": "ledger_tx"
     }
   ],
   "batches": [
@@ -267,6 +271,17 @@
           "qor": "3"
         }
       ]
+    },
+    {
+      "index": 2,
+      "status": "rejected",
+      "inboxStart": 18,
+      "inboxEnd": 19,
+      "submittedAt": 10514310,
+      "stateRoot": "e5f8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+      "withdrawalsRoot": "",
+      "canonical": false,
+      "withdrawals": []
     }
   ],
   "payouts": {

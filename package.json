@@ -16,5 +16,9 @@
     "typescript": "^7.0.2",
     "vitest": "^5.1.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@noble/post-quantum": "^0.6.1",
+    "@qorechain/rdk": "^0.9.0"
+  }
 }

@@ -12,7 +12,7 @@ import {
 } from "../../src/crypto.js";
 import { getClient, ROLLUP_ID } from "./client.js";
 import { connectOperator } from "./signer.js";
-import { readJson, secret, writeFile } from "./lib/files.js";
+import { exists, readJson, secret, writeFile } from "./lib/files.js";
 
 // Submit one station-day the LedgerPump way:
 //   1. reconcile on the "station's device"
@@ -23,7 +23,7 @@ import { readJson, secret, writeFile } from "./lib/files.js";
 //
 // Usage: npm run post-report -- [index]   (index into data/sample/reports.json, default 0)
 async function main(): Promise<void> {
-  const index = Number(process.argv[2] ?? 0);
+  const index = Number(process.argv.slice(2).find((a) => !a.startsWith("--")) ?? 0);
   const report = readJson<DailyReport[]>("../data/sample/reports.json")[index];
   if (!report) throw new Error(`No report at index ${index}`);
 
@@ -36,9 +36,17 @@ async function main(): Promise<void> {
   if (!kem) throw new Error("Owner has no ML-KEM-1024 key on chain. Run: npm run keys && npm run register-kem");
   const readers = [{ member: tx.address, encapsulationKey: hexToBytes(kem.publicKey) }];
 
+  // One submission per station-day unless --resubmit (a resubmission is kept, never overwritten,
+  // and the watchtower shows it as a duplicate).
+  const dayDir = `store/${report.stationId}/${report.date}`;
+  if (exists(dayDir) && !process.argv.includes("--resubmit")) {
+    throw new Error(`${report.stationId} ${report.date} was already submitted. Use --resubmit to post it again.`);
+  }
+
   const result = reconcile(report);
   const envelope = encryptReport(ctx, report, readers);
-  const storePath = `store/${report.stationId}/${report.date}.bin`;
+  // Content-addressed: the file name is the hash the leaf commits to.
+  const storePath = `${dayDir}/${sha256Hex(envelope)}.bin`;
   writeFile(storePath, envelope);
 
   const leaf: ReportLeaf = {

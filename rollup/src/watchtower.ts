@@ -45,7 +45,7 @@ async function main(): Promise<void> {
     operator,
     posts: entries.map((e, i) => ({ sequence: i + 1, poster: e.poster, payload: e.payload })),
     stationKeys,
-    loadCiphertext: (s, d) => (exists(`store/${s}/${d}.bin`) ? readBytes(`store/${s}/${d}.bin`) : undefined),
+    loadCiphertext: (s, d, h) => (exists(`store/${s}/${d}/${h}.bin`) ? readBytes(`store/${s}/${d}/${h}.bin`) : undefined),
   });
   const icon = { info: "OK ", warn: "!! ", alert: "XX " } as const;
   for (const f of findings) {

@@ -21,12 +21,12 @@ function scenario() {
   const report = (i: number, sk = ngt.secretKey, statusOverride?: ReportLeaf["status"]) => {
     const r = data.reports[i];
     const envelope = encryptReport(ctx, r, readers);
-    store.set(`${r.stationId}|${r.date}`, envelope);
+    store.set(`${r.stationId}|${r.date}|${sha256Hex(envelope)}`, envelope);
     const leaf: ReportLeaf = { v: 2, stationId: r.stationId, date: r.date, ciphertextHash: sha256Hex(envelope), status: statusOverride ?? reconcile(r).status };
     posts.push({ sequence: ++seq, poster: operator, payload: encodePost(leaf, signLeaf(ctx, leaf, sk)) });
   };
   const run = () =>
-    watch({ ctx, operator, posts, stationKeys: { "NGT-LAG-01": ngt.publicKey }, loadCiphertext: (s, d) => store.get(`${s}|${d}`) });
+    watch({ ctx, operator, posts, stationKeys: { "NGT-LAG-01": ngt.publicKey }, loadCiphertext: (s, d, h) => store.get(`${s}|${d}|${h}`) });
   return { store, posts, anchor, report, run };
 }
 
@@ -45,7 +45,7 @@ describe("watchtower tier 1 (no decryption)", () => {
     const s = scenario();
     s.anchor("NGT-LAG-01", ngt.publicKey);
     s.report(0);
-    const k = `${data.reports[0].stationId}|${data.reports[0].date}`;
+    const k = [...s.store.keys()][0];
     const t = s.store.get(k)!.slice();
     t[t.length - 1] ^= 0xff;
     s.store.set(k, t);
@@ -78,6 +78,14 @@ describe("watchtower tier 1 (no decryption)", () => {
     s.anchor("NGT-LAG-01", ngt.publicKey, "qor1attacker");
     s.report(0);
     expect(kinds(s.run())).toEqual(["anchor_not_from_operator", "unknown_station"]);
+  });
+
+  it("keeps both ciphertexts when a station-day is resubmitted (no overwrite)", () => {
+    const s = scenario();
+    s.anchor("NGT-LAG-01", ngt.publicKey);
+    s.report(0);
+    s.report(0);
+    expect(kinds(s.run())).toEqual(["station_anchored", "ok", "duplicate_submission", "ok"]);
   });
 
   it("flags duplicate submissions for the same station-day", () => {

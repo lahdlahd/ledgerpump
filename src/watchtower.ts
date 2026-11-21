@@ -37,8 +37,8 @@ export interface WatchInput {
   posts: InboxPost[];
   /** stationId → ML-DSA-87 public key (from rollup/registry/stations.json). */
   stationKeys: Record<string, Uint8Array>;
-  /** The off-chain ciphertext store. */
-  loadCiphertext: (stationId: string, date: string) => Uint8Array | undefined;
+  /** The off-chain ciphertext store, content-addressed by the committed hash. */
+  loadCiphertext: (stationId: string, date: string, ciphertextHash: string) => Uint8Array | undefined;
 }
 
 const sha256 = (b: Uint8Array) => createHash("sha256").update(b).digest("hex");
@@ -90,7 +90,7 @@ export function watch(input: WatchInput): Finding[] {
       out.push({ ...base, kind: "duplicate_submission", severity: "warn", detail: `first posted at sequence ${seen.get(k)}` });
     } else seen.set(k, p.sequence);
 
-    const ct = input.loadCiphertext(leaf.stationId, leaf.date);
+    const ct = input.loadCiphertext(leaf.stationId, leaf.date, leaf.ciphertextHash);
     if (!ct) {
       out.push({ ...base, kind: "ciphertext_missing", severity: "alert" });
       continue;

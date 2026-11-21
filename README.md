@@ -23,7 +23,7 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Metadata monitor (missing days, duplicate submissions), with no decryption needed | `src/monitor.ts` | ✅ tested |
 | Seeded synthetic data generator | `data/generate.ts` | ✅ tested |
 | Post-quantum encryption and signing | — | ⏳ |
-| Rollup sequencer and anchoring (QoreChain RDK) | — | ⏳ |
+| Rollup operator scaffold (QoreChain RDK, custom profile, optimistic + qledger-v1) | `rollup/` | ⏳ not yet created on testnet |
 | Watchtower (public integrity + auditor tiers) | — | ⏳ |
 | Withdrawals and settlement receipts | — | ⏳ |
 | Dashboard | — | ⏳ |
@@ -67,7 +67,7 @@ The tests assert that the engine flags exactly the planted anomalies, each throu
 ## Credits
 
 - [TypeScript](https://www.typescriptlang.org/), [tsx](https://github.com/privatenumber/tsx) and [Vitest](https://vitest.dev/): tooling.
-- QoreChain RDK and SDK: to be added as integrated.
+- [QoreChain RDK](https://github.com/qorechain/qorechain-rdk) (`@qorechain/rdk`): the `rollup/` folder starts from the `create-qorechain-rollup` custom-rollup template.
 
 AI assistance is documented in [AI_USAGE.md](AI_USAGE.md).
 

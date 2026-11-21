@@ -1,14 +1,8 @@
 // Three-way reconciliation engine. Runs on the station's device before the report is
 // encrypted, so only the resulting status (not the figures) needs to leave in the clear.
 
-import {
-  CheckResult,
-  DailyReport,
-  DEFAULT_TOLERANCES,
-  ReconciliationResult,
-  Status,
-  Tolerances,
-} from "./types";
+import { DEFAULT_TOLERANCES } from "./types";
+import type { CheckResult, DailyReport, ReconciliationResult, Status, Tolerances } from "./types";
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
 

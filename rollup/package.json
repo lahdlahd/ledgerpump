@@ -6,11 +6,13 @@
   "description": "A QoreChain custom rollup (optimistic / dedicated / native / standard / EVM, fully overridable) demonstrating the compatibility matrix.",
   "scripts": {
     "create": "tsx src/create.ts",
-    "submit-batch": "tsx src/submit-batch.ts",
+    "submit-batch": "tsx src/submit-qbatch.ts",
     "query-status": "tsx src/query-status.ts",
     "doctor": "tsx src/doctor.ts",
     "status": "tsx src/status.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "bond": "tsx src/bond.ts",
+    "post-report": "tsx src/post-report.ts"
   },
   "dependencies": {
     "@cosmjs/proto-signing": "^0.39.0",

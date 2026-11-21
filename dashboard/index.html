@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LedgerPump — Reconciliation &amp; Settlement</title>
+<style>
+  :root {
+    --bg: #f6f4ef; --panel: #ffffff; --ink: #1b1a17; --muted: #6b675e; --line: #e4e0d6;
+    --amber: #d98b14; --amber-soft: #fbf0dc; --ok: #2f7d4f; --ok-soft: #e3f2e8;
+    --warn: #a8660a; --warn-soft: #fdf1dd; --bad: #b3362b; --bad-soft: #f9e3e0;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 28px 40px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+  h1 span { color: var(--amber); }
+  .tag { color: var(--muted); margin-top: 2px; }
+  .chainline { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: right; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; vertical-align: middle; }
+  main { padding: 24px 40px 60px; display: grid; gap: 20px; max-width: 1400px; margin: 0 auto; }
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .kpi .v { font-size: 26px; font-weight: 650; letter-spacing: -0.02em; }
+  .kpi .l { color: var(--muted); font-size: 12px; }
+  .grid2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  section h2 { margin: 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding: 14px 16px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 9px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+  tr:last-child td { border-bottom: 0; }
+  .mono { font-family: var(--mono); font-size: 12px; }
+  td.nw, .nw { white-space: nowrap; }
+  .muted { color: var(--muted); }
+  .chip { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .chip.ok { background: var(--ok-soft); color: var(--ok); }
+  .chip.warn { background: var(--warn-soft); color: var(--warn); }
+  .chip.bad { background: var(--bad-soft); color: var(--bad); }
+  .chip.info { background: var(--amber-soft); color: var(--warn); }
+  .chip.neutral { background: #efece5; color: var(--muted); }
+  .alerts li { padding: 10px 16px; border-bottom: 1px solid var(--line); list-style: none; }
+  .alerts { margin: 0; padding: 0; }
+  .alerts li:last-child { border-bottom: 0; }
+  .owner { border-color: var(--amber); }
+  .owner h2 { background: var(--amber-soft); color: var(--warn); }
+  .bar { height: 6px; border-radius: 3px; background: #efece5; position: relative; min-width: 80px; }
+  .bar i { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 3px; }
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding: 0 40px 40px; }
+  .empty { padding: 16px; color: var(--muted); }
+  a { color: inherit; }
+  @media (max-width: 1000px) { .kpis { grid-template-columns: repeat(2, 1fr); } .grid2 { grid-template-columns: 1fr; } header, main { padding-left: 16px; padding-right: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Ledger<span>Pump</span></h1>
+    <div class="tag">Trust every transaction. Reconcile every litre. Post-quantum reconciliation &amp; settlement on QoreChain.</div>
+  </div>
+  <div class="chainline" id="chainline">loading…</div>
+</header>
+<main id="app"><div class="empty">Loading snapshot… run <span class="mono">npm run snapshot</span> in <span class="mono">rollup/</span> if this stays empty.</div></main>
+<footer>All stations and figures are synthetic demo data. Public panels use only on-chain commitments and ciphertext — nothing is decrypted. The owner panel appears only on a machine holding the owner's ML-KEM-1024 key.</footer>
+
+<script>
+const short = (h, n = 8) => (h ? `${h.slice(0, n)}…${h.slice(-4)}` : "—");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const statusChip = (s) =>
+  ({ balanced: '<span class="chip ok">balanced</span>', within_tolerance: '<span class="chip ok">within tolerance</span>', discrepancy: '<span class="chip bad">discrepancy</span>' })[s] ??
+  `<span class="chip neutral">${esc(s)}</span>`;
+const verdict = {
+  ok: ["ok", "verified"], discrepancy_reported: ["warn", "held — discrepancy"], duplicate_submission: ["warn", "duplicate"],
+  ciphertext_missing: ["bad", "ciphertext missing"], ciphertext_tampered: ["bad", "tampered"], bad_signature: ["bad", "bad signature"],
+  unknown_station: ["bad", "unknown station"], station_anchored: ["info", "key anchored"], anchor_mismatch: ["bad", "anchor mismatch"],
+  anchor_not_from_operator: ["bad", "anchor not from operator"],
+};
+const chip = (k) => { const [c, t] = verdict[k] ?? ["neutral", k]; return `<span class="chip ${c}">${esc(t)}</span>`; };
+const naira = (kobo) => (kobo < 0 ? "−" : kobo > 0 ? "+" : "") + "₦" + Math.abs(kobo / 100).toLocaleString("en-NG", { maximumFractionDigits: 0 });
+
+async function load(path) { try { const r = await fetch(path, { cache: "no-store" }); return r.ok ? r.json() : null; } catch { return null; } }
+
+(async () => {
+  const pub = await load("data/public.json");
+  const owner = await load("data/owner.json");
+  const app = document.getElementById("app");
+  if (!pub) return;
+
+  document.getElementById("chainline").innerHTML =
+    `<span class="dot"></span>rollup <b>${esc(pub.rollup.id)}</b> · ${esc(pub.rollup.status)} · ${esc(pub.rollup.settlement)} · ${esc(pub.chainId)}<br>` +
+    `inbox ${pub.inbox.consumed}/${pub.inbox.head} batched · snapshot ${new Date(pub.generatedAt).toLocaleString()}`;
+
+  const F = pub.findings;
+  const verified = F.filter((f) => f.kind === "ok").length;
+  const held = F.filter((f) => f.kind === "discrepancy_reported").length;
+  const alerts = F.filter((f) => f.severity === "alert");
+  const paidQor = Object.keys(pub.payouts).length;
+  const canonical = pub.batches.filter((b) => b.canonical).length;
+
+  const byPost = new Map();
+  for (const f of F) { if (!byPost.has(f.sequence)) byPost.set(f.sequence, []); byPost.get(f.sequence).push(f); }
+  const reports = pub.entries.filter((e) => e.kind === "report" && e.leaf);
+
+  let html = `
+  <div class="kpis">
+    <div class="kpi"><div class="v">${verified}</div><div class="l">reports verified (signature + ciphertext)</div></div>
+    <div class="kpi"><div class="v" style="color:var(--warn)">${held}</div><div class="l">station-days held for discrepancy</div></div>
+    <div class="kpi"><div class="v" style="color:var(--ok)">${paidQor}</div><div class="l">station-days paid out</div></div>
+    <div class="kpi"><div class="v" style="color:${alerts.length ? "var(--bad)" : "var(--ok)"}">${alerts.length}</div><div class="l">integrity alerts</div></div>
+    <div class="kpi"><div class="v">${canonical}/${pub.batches.length}</div><div class="l">batches with canonical roots</div></div>
+  </div>
+
+  <div class="grid2">
+    <section>
+      <h2>Report timeline <span>from the rollup inbox</span></h2>
+      ${reports.length ? `<table><tr><th>#</th><th>Station</th><th>Date</th><th>Reported status</th><th>Watchtower</th><th>Ciphertext</th><th>Payout</th></tr>
+      ${reports.map((e) => {
+        const fs = byPost.get(e.seq) ?? [];
+        const paid = pub.payouts[`${e.leaf.stationId}|${e.leaf.date}`];
+        const first = !fs.some((f) => f.kind === "duplicate_submission");
+        return `<tr><td class="mono">${e.seq}</td><td class="nw">${esc(e.leaf.stationId)}</td><td class="nw">${esc(e.leaf.date)}</td><td>${statusChip(e.leaf.status)}</td>
+          <td>${fs.map((f) => chip(f.kind)).join(" ")}</td><td class="mono muted">${short(e.leaf.ciphertextHash)}</td>
+          <td>${paid && first ? `<span class="chip ok">paid</span> <span class="mono muted">${short(paid, 6)}</span>` : '<span class="muted">—</span>'}</td></tr>`;
+      }).join("")}</table>` : '<div class="empty">No reports yet.</div>'}
+    </section>
+
+    <section>
+      <h2>Watchtower alerts <span>public tier · no keys</span></h2>
+      ${alerts.length ? `<ul class="alerts">${alerts.map((a) => `<li>${chip(a.kind)} <span class="mono">#${a.sequence}</span> ${esc(a.stationId ?? "")} ${esc(a.date ?? "")}<div class="muted">${esc(a.detail ?? "")}</div></li>`).join("")}</ul>` : '<div class="empty">No integrity alerts.</div>'}
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section>
+      <h2>Settlement batches <span>re-executed independently</span></h2>
+      <table><tr><th>Batch</th><th>Status</th><th>Inbox</th><th>Roots</th><th>State root</th><th>Withdrawals</th></tr>
+      ${pub.batches.map((b) => `<tr><td class="mono">${b.index}</td>
+        <td>${b.status === "finalized" ? '<span class="chip ok">finalized</span>' : b.status === "submitted" ? '<span class="chip info">in challenge window</span>' : `<span class="chip bad">${esc(b.status)}</span>`}</td>
+        <td class="mono">${b.inboxStart}→${b.inboxEnd}</td>
+        <td>${b.canonical ? '<span class="chip ok">canonical</span>' : '<span class="chip bad">WRONG</span>'}</td>
+        <td class="mono muted">${short(b.stateRoot)}</td>
+        <td>${b.withdrawals.length ? b.withdrawals.map((w) => `${w.qor} QOR ${pub.claims[w.index] ? '<span class="chip ok">claimed</span>' : '<span class="chip neutral">claimable after finality</span>'}`).join("<br>") : '<span class="muted">—</span>'}</td></tr>`).join("")}
+      </table>
+    </section>
+
+    <section>
+      <h2>Stations <span>ML-DSA-87 keys anchored on-chain</span></h2>
+      <table><tr><th>Station</th><th>Key</th><th>Reports</th><th>Paid days</th><th>L2 balance</th></tr>
+      ${pub.stations.map((s) => `<tr><td><b>${esc(s.name)}</b><div class="muted">${esc(s.stationId)} · ${esc(s.city)}</div></td>
+        <td>${s.anchored ? '<span class="chip ok">anchored</span>' : '<span class="chip bad">not anchored</span>'}<div class="mono muted">${short(s.keyFingerprint)}</div></td>
+        <td>${s.reports}</td><td>${s.paidDays}</td><td class="mono">${esc(s.l2BalanceQor)} QOR</td></tr>`).join("")}
+      </table>
+      <div class="empty">Treasury L2 balance: <b class="mono">${esc(pub.treasuryQor)} QOR</b></div>
+    </section>
+  </div>`;
+
+  if (owner && owner.length) {
+    const maxExp = Math.max(1, ...owner.map((o) => o.exposureKobo));
+    html += `
+  <section class="owner">
+    <h2>Owner view <span>decrypted locally with the owner's ML-KEM-1024 key</span></h2>
+    <table><tr><th>#</th><th>Station</th><th>Date</th><th>Status</th><th>Meters vs tanks</th><th>Litres vs money</th><th>Received vs waybill</th><th>Exposure</th></tr>
+    ${owner.map((o) => {
+      const cell = (name) => o.checks.filter((c) => c.check === name).map((c) =>
+        `<div>${c.product ? `<b>${c.product}</b> ` : ""}${c.unit === "kobo" ? naira(c.variance) : (c.variance > 0 ? "+" : "") + c.variance + " L"} ${c.status === "discrepancy" ? '<span class="chip bad">!</span>' : ""}</div>`).join("") || '<span class="muted">—</span>';
+      return `<tr><td class="mono">${o.sequence}</td><td class="nw">${esc(o.stationId)}</td><td class="nw">${esc(o.date)}</td><td>${statusChip(o.status)}</td>
+        <td class="mono">${cell("meter_vs_tank")}</td><td class="mono">${cell("money")}</td><td class="mono">${cell("received_vs_waybill")}</td>
+        <td>${o.exposureKobo ? `<b style="color:var(--bad)">₦${(o.exposureKobo / 100).toLocaleString("en-NG", { maximumFractionDigits: 0 })}</b><div class="bar"><i style="width:${(100 * o.exposureKobo) / maxExp}%;background:var(--bad)"></i></div>` : '<span class="muted">—</span>'}</td></tr>`;
+    }).join("")}
+    </table>
+  </section>`;
+  }
+  app.innerHTML = html;
+})();
+</script>
+</body>
+</html>

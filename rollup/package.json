@@ -21,7 +21,8 @@
     "deposit": "tsx src/deposit.ts",
     "pay": "tsx src/pay.ts",
     "withdraw": "tsx src/withdraw.ts",
-    "claim": "tsx src/claim.ts"
+    "claim": "tsx src/claim.ts",
+    "snapshot": "tsx src/snapshot.ts"
   },
   "dependencies": {
     "@cosmjs/proto-signing": "^0.39.0",

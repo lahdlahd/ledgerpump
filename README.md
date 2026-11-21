@@ -26,7 +26,7 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Rollup operator scaffold (QoreChain RDK, custom profile, optimistic + qledger-v1) | `rollup/` | ✅ rollup `ledgerpump` created on testnet (see [docs/TESTNET_LOG.md](docs/TESTNET_LOG.md)) |
 | Watchtower tier 1 (public, no keys): anchors, ML-DSA-87 signatures, ciphertext commitments, duplicates, canonical batch re-execution, `--challenge` fraud proofs | `src/watchtower.ts`, `rollup/src/watchtower.ts` | ✅ tested + run on testnet (caught a real overwritten ciphertext) |
 | Payouts: deposit → treasury pays reconciled station-days (qledger ML-DSA-44 transfers) → station withdrawal → execute with Merkle proof after finalisation | `rollup/src/{deposit,pay,withdraw,claim}.ts` | ⏳ on-chain run pending |
-| Dashboard | — | ⏳ |
+| Dashboard: public watchtower view (timeline, alerts, batches, stations) + owner view decrypted locally | `dashboard/`, `rollup/src/snapshot.ts` | ✅ |
 
 ## Quick start
 
@@ -36,6 +36,8 @@ npm test            # unit tests + full-dataset checks
 npm run generate    # writes data/sample/*.json (seed 2026)
 npm run typecheck
 ```
+
+Dashboard: `cd rollup && npm run snapshot`, then `npm run dashboard` from the repo root and open http://localhost:5173.
 
 Requires Node 20+.
 

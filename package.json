@@ -5,7 +5,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc",
-    "generate": "tsx data/generate.ts"
+    "generate": "tsx data/generate.ts",
+    "dashboard": "node dashboard/serve.mjs"
   },
   "keywords": [],
   "author": "",

@@ -23,7 +23,7 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Metadata monitor (missing days, duplicate submissions), with no decryption needed | `src/monitor.ts` | ✅ tested |
 | Seeded synthetic data generator | `data/generate.ts` | ✅ tested |
 | Post-quantum encryption and signing | — | ⏳ |
-| Rollup operator scaffold (QoreChain RDK, custom profile, optimistic + qledger-v1) | `rollup/` | ⏳ not yet created on testnet |
+| Rollup operator scaffold (QoreChain RDK, custom profile, optimistic + qledger-v1) | `rollup/` | ✅ rollup `ledgerpump` created on testnet (see [docs/TESTNET_LOG.md](docs/TESTNET_LOG.md)) |
 | Watchtower (public integrity + auditor tiers) | — | ⏳ |
 | Withdrawals and settlement receipts | — | ⏳ |
 | Dashboard | — | ⏳ |

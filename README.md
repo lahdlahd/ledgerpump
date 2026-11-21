@@ -24,8 +24,8 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Seeded synthetic data generator | `data/generate.ts` | ✅ tested |
 | Post-quantum crypto: ML-DSA-87 station signatures; ML-KEM-1024 + AES-256-GCM report envelopes to readers' keys in QoreChain's KEM registry; inbox post format | `src/crypto.ts`, `rollup/src/post-report.ts` | ✅ tested (on-chain run pending) |
 | Rollup operator scaffold (QoreChain RDK, custom profile, optimistic + qledger-v1) | `rollup/` | ✅ rollup `ledgerpump` created on testnet (see [docs/TESTNET_LOG.md](docs/TESTNET_LOG.md)) |
-| Watchtower (public integrity + auditor tiers) | — | ⏳ |
-| Withdrawals and settlement receipts | — | ⏳ |
+| Watchtower tier 1 (public, no keys): anchors, ML-DSA-87 signatures, ciphertext commitments, duplicates, canonical batch re-execution, `--challenge` fraud proofs | `src/watchtower.ts`, `rollup/src/watchtower.ts` | ✅ tested + run on testnet (caught a real overwritten ciphertext) |
+| Payouts: deposit → treasury pays reconciled station-days (qledger ML-DSA-44 transfers) → station withdrawal → execute with Merkle proof after finalisation | `rollup/src/{deposit,pay,withdraw,claim}.ts` | ⏳ on-chain run pending |
 | Dashboard | — | ⏳ |
 
 ## Quick start

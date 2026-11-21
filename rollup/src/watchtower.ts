@@ -72,6 +72,12 @@ async function main(): Promise<void> {
         const tx = await connectOperator(client);
         const res = await tx.challengeBatch({ rollupId: ROLLUP_ID, batchIndex: b.batchIndex, proof });
         console.log(`    challenged: ${res.transactionHash} (code ${res.code})`);
+        const after = (await client.rest.listBatches(ROLLUP_ID)).find((x) => x.batchIndex === b.batchIndex);
+        console.log(`    batch ${b.batchIndex} is now: ${after?.status ?? "unknown"}`);
+        if (after?.status === "challenged") {
+          const r2 = await tx.resolveChallenge({ rollupId: ROLLUP_ID, batchIndex: b.batchIndex, fraudUpheld: true });
+          console.log(`    resolved (fraud upheld): ${r2.transactionHash} (code ${r2.code})`);
+        }
       }
     }
   }

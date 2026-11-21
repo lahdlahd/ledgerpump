@@ -71,6 +71,8 @@ The tests assert that the engine flags exactly the planted anomalies, each throu
 - [TypeScript](https://www.typescriptlang.org/), [tsx](https://github.com/privatenumber/tsx) and [Vitest](https://vitest.dev/): tooling.
 - [QoreChain RDK](https://github.com/qorechain/qorechain-rdk) (`@qorechain/rdk`): the `rollup/` folder starts from the `create-qorechain-rollup` custom-rollup template.
 
+Threat model: [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md). Testnet evidence: [docs/TESTNET_LOG.md](docs/TESTNET_LOG.md).
+
 AI assistance is documented in [AI_USAGE.md](AI_USAGE.md).
 
 ## Licence

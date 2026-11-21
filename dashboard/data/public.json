@@ -1,0 +1,280 @@
+{
+  "generatedAt": "2026-11-21T20:47:20.405Z",
+  "chainId": "qorechain-diana",
+  "rollup": {
+    "id": "ledgerpump",
+    "status": "active",
+    "profile": "custom",
+    "settlement": "optimistic",
+    "creator": "qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn"
+  },
+  "inbox": {
+    "head": 18,
+    "consumed": 18
+  },
+  "treasuryQor": "17",
+  "stations": [
+    {
+      "stationId": "NGT-LAG-01",
+      "name": "Northgate Fuel",
+      "city": "Lagos",
+      "keyFingerprint": "05f81413251ea5bf900e4d12753dabc07ec78396f283dd538a8603ec110f7e01",
+      "anchored": true,
+      "reports": 4,
+      "paidDays": 3,
+      "l2BalanceQor": "0"
+    },
+    {
+      "stationId": "RVS-BEN-01",
+      "name": "Riverside Fuel",
+      "city": "Benin",
+      "keyFingerprint": "6dd540c6b02d02c2dbf500d4f17ce787e2596853b3cdaf1132ca65bdbeb95cc9",
+      "anchored": true,
+      "reports": 0,
+      "paidDays": 0,
+      "l2BalanceQor": "0"
+    },
+    {
+      "stationId": "HLT-AKR-01",
+      "name": "Hilltop Fuel",
+      "city": "Akure",
+      "keyFingerprint": "cea7d9535d2a0b0f8358a1cade24d245a5e39876a5c7496891a81614ee57759e",
+      "anchored": true,
+      "reports": 0,
+      "paidDays": 0,
+      "l2BalanceQor": "0"
+    }
+  ],
+  "findings": [
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 3,
+      "stationId": "NGT-LAG-01"
+    },
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 4,
+      "stationId": "RVS-BEN-01"
+    },
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 5,
+      "stationId": "HLT-AKR-01"
+    },
+    {
+      "sequence": 6,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-08",
+      "kind": "ciphertext_missing",
+      "severity": "alert"
+    },
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 7,
+      "stationId": "NGT-LAG-01"
+    },
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 8,
+      "stationId": "RVS-BEN-01"
+    },
+    {
+      "kind": "station_anchored",
+      "severity": "info",
+      "sequence": 9,
+      "stationId": "HLT-AKR-01"
+    },
+    {
+      "sequence": 10,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-08",
+      "kind": "duplicate_submission",
+      "severity": "warn",
+      "detail": "first posted at sequence 6"
+    },
+    {
+      "sequence": 10,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-08",
+      "kind": "discrepancy_reported",
+      "severity": "warn",
+      "detail": "station-day does not qualify for payout"
+    },
+    {
+      "sequence": 11,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-01",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
+    },
+    {
+      "sequence": 12,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-02",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
+    },
+    {
+      "sequence": 13,
+      "stationId": "NGT-LAG-01",
+      "date": "2026-11-03",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
+    }
+  ],
+  "entries": [
+    {
+      "seq": 1,
+      "kind": "report_v1_test"
+    },
+    {
+      "seq": 2,
+      "kind": "report_v1_test"
+    },
+    {
+      "seq": 3,
+      "kind": "station_key"
+    },
+    {
+      "seq": 4,
+      "kind": "station_key"
+    },
+    {
+      "seq": 5,
+      "kind": "station_key"
+    },
+    {
+      "seq": 6,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "914b6df3c8ea9be37fe44c64912698462872a65bc338a4f44b62be6c1ea994e4",
+        "date": "2026-11-08",
+        "stationId": "NGT-LAG-01",
+        "status": "discrepancy",
+        "v": 2
+      }
+    },
+    {
+      "seq": 7,
+      "kind": "station_key"
+    },
+    {
+      "seq": 8,
+      "kind": "station_key"
+    },
+    {
+      "seq": 9,
+      "kind": "station_key"
+    },
+    {
+      "seq": 10,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "ceff852fb2419c3ea9a9b9e2ad2fad8b6754a441c582c4830fd794670a0278e4",
+        "date": "2026-11-08",
+        "stationId": "NGT-LAG-01",
+        "status": "discrepancy",
+        "v": 2
+      }
+    },
+    {
+      "seq": 11,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "db81dd53a1f9e0bbf48e9a91733b313a8b8c13f5fdd7f897bf0ebcdb38059b7b",
+        "date": "2026-11-01",
+        "stationId": "NGT-LAG-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 12,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "38b4573999d3bc63d887ef849b10faa26bfde2df5f875bf7a3b1f4eb8a93e6a7",
+        "date": "2026-11-02",
+        "stationId": "NGT-LAG-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 13,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "802def27fbedea72491e7f3db8601b7ee3e82d40c1b144c983c1b67d3ae2f5af",
+        "date": "2026-11-03",
+        "stationId": "NGT-LAG-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 14,
+      "kind": "deposit"
+    },
+    {
+      "seq": 15,
+      "kind": "ledger_tx"
+    },
+    {
+      "seq": 16,
+      "kind": "ledger_tx"
+    },
+    {
+      "seq": 17,
+      "kind": "ledger_tx"
+    },
+    {
+      "seq": 18,
+      "kind": "ledger_tx"
+    }
+  ],
+  "batches": [
+    {
+      "index": 0,
+      "status": "finalized",
+      "inboxStart": 0,
+      "inboxEnd": 2,
+      "submittedAt": 10509861,
+      "stateRoot": "ff51bb4bc870040363b3db566d324c5b4aba906fd0c0511ba6131b4f2a3b4536",
+      "withdrawalsRoot": "",
+      "canonical": true,
+      "withdrawals": []
+    },
+    {
+      "index": 1,
+      "status": "finalized",
+      "inboxStart": 2,
+      "inboxEnd": 18,
+      "submittedAt": 10511332,
+      "stateRoot": "1af8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+      "withdrawalsRoot": "34872be574105c985eee4c9edeefdb0e4170a9bdc01dd710bf94d358bb2e5d4a",
+      "canonical": true,
+      "withdrawals": [
+        {
+          "index": 0,
+          "recipient": "qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn",
+          "qor": "3"
+        }
+      ]
+    }
+  ],
+  "payouts": {
+    "NGT-LAG-01|2026-11-01": "1792A90F7C43E7683AC98753F86025F2121D2B0A5F22E35E448316B12E0F5056",
+    "NGT-LAG-01|2026-11-02": "57035335A37BC2BE20CC6DEED38CEB67B5A75547F9907933D441A16CE230904B",
+    "NGT-LAG-01|2026-11-03": "ABA92ADF5BDD6E7447F4D897C66D65598FC3883C7E45A3AA79BC4B476CBB4F7D"
+  },
+  "claims": {
+    "0": "CA9CE5776BAF105EFBBD4D6C0B6588BFEC4623A3A9ABB13780CB84842FB05195"
+  }
+}

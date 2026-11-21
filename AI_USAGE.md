@@ -30,6 +30,19 @@ LedgerPump is built with an AI-native workflow. This file is kept up to date as 
 
 ## Human contribution
 
-- Choosing the track, the problem and the product.
-- Architecture approval, and the constraints: an independent project and synthetic data only.
-- Funding and operating the testnet rollup, reviewing all code, and recording the demo.
+**Joel Adeleye (@lahdlahd), engineering**
+- Chose the track, the problem and the product.
+- Approved the architecture and set the constraints: an independent project and synthetic data only.
+- Directs and reviews all AI-generated code.
+- Funds and operates the testnet rollup, including the operator keys, which never leave his machine.
+
+**@Thehaneul, product and launch lead**
+- Writes, records and edits the demo video, and makes the cover image.
+- Writes and maintains the project page.
+- Designs the demo scenario: the story of the stations and the order the anomalies are shown in.
+- Tests and does QA, filing bugs as GitHub Issues.
+- Reviews the reconciliation rules for realism.
+- Co-writes the threat model.
+- Builds in public on X and in My space.
+
+No code is committed under a team member's name unless that member wrote or directed it.

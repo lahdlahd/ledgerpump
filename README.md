@@ -61,8 +61,8 @@ The tests assert that the engine flags exactly the planted anomalies, each throu
 
 ## Team
 
-- Joel Adeleye ([@lahdlahd](https://github.com/lahdlahd))
-- [@Thehaneul](https://github.com/Thehaneul)
+- **Joel Adeleye** ([@lahdlahd](https://github.com/lahdlahd)): engineering. Reconciliation engine, cryptography, rollup, sequencer, watchtower and dashboard.
+- **[@Thehaneul](https://github.com/Thehaneul)**: product and launch lead. Demo video, cover image, project page, demo scenario, testing and QA, threat model co-author, and building in public.
 
 ## Credits
 

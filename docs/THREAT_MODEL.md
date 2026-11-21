@@ -31,7 +31,7 @@ LedgerPump settles fuel-station reconciliation on a QoreChain rollup. This docum
 | T8 | Payout for a station-day that didn't reconcile | The treasury signs transfers only for watchtower-verified, non-discrepancy, first submissions; anyone can audit every transfer against the inbox leaves | ⚠️ enforced off-chain and auditable, **not** by the chain (the chain checks ledger correctness, not our business rule) |
 | T9 | Station lies about its own status | The auditor tier decrypts the report and re-runs reconciliation; a mismatch is evidence the signed leaf was false | ✅ engine tested; auditor tooling: `read-report` |
 | T10 | Duplicate / replayed submissions | Flagged by the watchtower from `(station, date)`; payouts skip duplicates; signatures are bound to chain and rollup | ✅ on testnet (inbox #10) |
-| T11 | Withdrawal paid twice or to the wrong address | The chain checks the Merkle proof against the finalised batch's withdrawals root and tracks withdrawal indices | ✅ by chain design; first claim pending batch 1 finality |
+| T11 | Withdrawal paid twice or to the wrong address | The chain checks the Merkle proof against the finalised batch's withdrawals root and tracks withdrawal indices | ✅ by chain design; first claim executed on testnet |
 
 ## What is public
 Station ID, date, reconciliation status, payout amount, ciphertext size and timing. This reveals *whether* a station balanced, not its figures. **Future:** commit the status as a salted hash revealed only to readers.

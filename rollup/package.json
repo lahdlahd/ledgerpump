@@ -16,7 +16,8 @@
     "keys": "tsx src/keys.ts",
     "register-kem": "tsx src/register-kem.ts",
     "register-stations": "tsx src/register-stations.ts",
-    "read-report": "tsx src/read-report.ts"
+    "read-report": "tsx src/read-report.ts",
+    "watchtower": "tsx src/watchtower.ts"
   },
   "dependencies": {
     "@cosmjs/proto-signing": "^0.39.0",

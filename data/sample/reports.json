@@ -1,0 +1,6397 @@
+[
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-01",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 464326,
+            "closingMeter": 467856.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 346797,
+            "closingMeter": 349479.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 628926,
+            "closingMeter": 631689
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 594780,
+            "closingMeter": 599414.1
+          }
+        ],
+        "openingDip": 40000,
+        "closingDip": 26390,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 221824,
+            "closingMeter": 223050.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 277475,
+            "closingMeter": 278787.1
+          }
+        ],
+        "openingDip": 30000,
+        "closingDip": 27456.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 646288,
+            "closingMeter": 646789.7
+          }
+        ],
+        "openingDip": 16000,
+        "closingDip": 15497.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 567641083,
+      "posKobo": 703351396,
+      "transferKobo": 378070551
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-02",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 467856.7,
+            "closingMeter": 470053.3
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 349479.1,
+            "closingMeter": 351975.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 631689,
+            "closingMeter": 633912.6
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 599414.1,
+            "closingMeter": 602446.6
+          }
+        ],
+        "openingDip": 26390,
+        "closingDip": 16427.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 223050.3,
+            "closingMeter": 225486.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 278787.1,
+            "closingMeter": 281107
+          }
+        ],
+        "openingDip": 27456.6,
+        "closingDip": 22694.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 646789.7,
+            "closingMeter": 648031.7
+          }
+        ],
+        "openingDip": 15497.7,
+        "closingDip": 14252.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 472113416,
+      "posKobo": 581863248,
+      "transferKobo": 593829973
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-03",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 470053.3,
+            "closingMeter": 472914.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 351975.9,
+            "closingMeter": 354611.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 633912.6,
+            "closingMeter": 635620.2
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 602446.6,
+            "closingMeter": 604518.1
+          }
+        ],
+        "openingDip": 16427.7,
+        "closingDip": 40106.6,
+        "receivedLitres": 32967.2,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 225486.3,
+            "closingMeter": 227448.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 281107,
+            "closingMeter": 282945.5
+          }
+        ],
+        "openingDip": 22694.9,
+        "closingDip": 18890,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 648031.7,
+            "closingMeter": 649033.6
+          }
+        ],
+        "openingDip": 14252.9,
+        "closingDip": 13249.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 500812003,
+      "posKobo": 559337596,
+      "transferKobo": 383896088
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-04",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 472914.9,
+            "closingMeter": 474377.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 354611.4,
+            "closingMeter": 355918.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 635620.2,
+            "closingMeter": 638300.7
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 604518.1,
+            "closingMeter": 607159.5
+          }
+        ],
+        "openingDip": 40106.6,
+        "closingDip": 32017.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 227448.4,
+            "closingMeter": 229394.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 282945.5,
+            "closingMeter": 284454.5
+          }
+        ],
+        "openingDip": 18890,
+        "closingDip": 15425.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 649033.6,
+            "closingMeter": 649549.5
+          }
+        ],
+        "openingDip": 13249.3,
+        "closingDip": 12732.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 381034570,
+      "posKobo": 498329187,
+      "transferKobo": 350503484
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-05",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 474377.6,
+            "closingMeter": 476446.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 355918.6,
+            "closingMeter": 357931.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 638300.7,
+            "closingMeter": 640435.1
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 607159.5,
+            "closingMeter": 609080.3
+          }
+        ],
+        "openingDip": 32017.3,
+        "closingDip": 23872.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 229394.3,
+            "closingMeter": 231812.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 284454.5,
+            "closingMeter": 286844.1
+          }
+        ],
+        "openingDip": 15425.8,
+        "closingDip": 10620.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 649549.5,
+            "closingMeter": 650877.7
+          }
+        ],
+        "openingDip": 12732.4,
+        "closingDip": 11403.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 446728383,
+      "posKobo": 669766537,
+      "transferKobo": 374208226
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-06",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 476446.7,
+            "closingMeter": 479095.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 357931.2,
+            "closingMeter": 360843.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 640435.1,
+            "closingMeter": 644405.5
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 609080.3,
+            "closingMeter": 613444.3
+          }
+        ],
+        "openingDip": 23872.6,
+        "closingDip": 9969.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 231812.3,
+            "closingMeter": 233642.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 286844.1,
+            "closingMeter": 289825.4
+          }
+        ],
+        "openingDip": 10620.7,
+        "closingDip": 5807.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 650877.7,
+            "closingMeter": 651982.8
+          }
+        ],
+        "openingDip": 11403.5,
+        "closingDip": 10298.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 683608580,
+      "posKobo": 777033424,
+      "transferKobo": 549459992
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-07",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 479095.1,
+            "closingMeter": 481185.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 360843.6,
+            "closingMeter": 363963.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 644405.5,
+            "closingMeter": 647382.8
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 613444.3,
+            "closingMeter": 616051.5
+          }
+        ],
+        "openingDip": 9969.2,
+        "closingDip": 32159.7,
+        "receivedLitres": 32998.1,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 233642.1,
+            "closingMeter": 235521.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 289825.4,
+            "closingMeter": 291371.7
+          }
+        ],
+        "openingDip": 5807.1,
+        "closingDip": 35369.3,
+        "receivedLitres": 32991.8,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 651982.8,
+            "closingMeter": 652621.2
+          }
+        ],
+        "openingDip": 10298.3,
+        "closingDip": 9659.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 401799816,
+      "posKobo": 571584986,
+      "transferKobo": 524839978
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-08",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 481185.4,
+            "closingMeter": 484189.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 363963.2,
+            "closingMeter": 367657.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 647382.8,
+            "closingMeter": 650214.9
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 616051.5,
+            "closingMeter": 620857.4
+          }
+        ],
+        "openingDip": 32159.7,
+        "closingDip": 17192.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 235521.5,
+            "closingMeter": 237026.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 291371.7,
+            "closingMeter": 292956.1
+          }
+        ],
+        "openingDip": 35369.3,
+        "closingDip": 32273.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 652621.2,
+            "closingMeter": 653628.8
+          }
+        ],
+        "openingDip": 9659.1,
+        "closingDip": 8649.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 522393989,
+      "posKobo": 722543530,
+      "transferKobo": 596865420
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-09",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 484189.8,
+            "closingMeter": 486209.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 367657.3,
+            "closingMeter": 370065.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 650214.9,
+            "closingMeter": 652018.6
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 620857.4,
+            "closingMeter": 623492
+          }
+        ],
+        "openingDip": 17192.5,
+        "closingDip": 41310.3,
+        "receivedLitres": 32986,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 237026.1,
+            "closingMeter": 238128.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 292956.1,
+            "closingMeter": 294509.5
+          }
+        ],
+        "openingDip": 32273.9,
+        "closingDip": 29615.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 653628.8,
+            "closingMeter": 654236.6
+          }
+        ],
+        "openingDip": 8649.7,
+        "closingDip": 8040.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 393001603,
+      "posKobo": 449364467,
+      "transferKobo": 382208862
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-10",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 486209.2,
+            "closingMeter": 488392.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 370065.5,
+            "closingMeter": 373386.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 652018.6,
+            "closingMeter": 654518.9
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 623492,
+            "closingMeter": 625513
+          }
+        ],
+        "openingDip": 41310.3,
+        "closingDip": 31266.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 238128.3,
+            "closingMeter": 239618.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 294509.5,
+            "closingMeter": 296312.2
+          }
+        ],
+        "openingDip": 29615.6,
+        "closingDip": 26319.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 654236.6,
+            "closingMeter": 655710.2
+          }
+        ],
+        "openingDip": 8040.3,
+        "closingDip": 6566.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 398213345,
+      "posKobo": 531868268,
+      "transferKobo": 583993801
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-11",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 488392.2,
+            "closingMeter": 490248.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 373386.2,
+            "closingMeter": 376861.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 654518.9,
+            "closingMeter": 657374.8
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 625513,
+            "closingMeter": 627483.3
+          }
+        ],
+        "openingDip": 31266.2,
+        "closingDip": 21105.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 239618.5,
+            "closingMeter": 240929.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 296312.2,
+            "closingMeter": 298139.1
+          }
+        ],
+        "openingDip": 26319.7,
+        "closingDip": 23179.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 655710.2,
+            "closingMeter": 656757.3
+          }
+        ],
+        "openingDip": 6566.9,
+        "closingDip": 5518.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 383827797,
+      "posKobo": 618613113,
+      "transferKobo": 454094423
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-12",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 490248.7,
+            "closingMeter": 494096.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 376861.1,
+            "closingMeter": 380287.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 657374.8,
+            "closingMeter": 660001.9
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 627483.3,
+            "closingMeter": 631159.2
+          }
+        ],
+        "openingDip": 21105.6,
+        "closingDip": 7519,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 240929.4,
+            "closingMeter": 243138.2
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 298139.1,
+            "closingMeter": 300055.5
+          }
+        ],
+        "openingDip": 23179.8,
+        "closingDip": 19049.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 656757.3,
+            "closingMeter": 657764.1
+          }
+        ],
+        "openingDip": 5518.2,
+        "closingDip": 4510.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 652318773,
+      "posKobo": 735945107,
+      "transferKobo": 502572780
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-13",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 494096.1,
+            "closingMeter": 498056.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 380287.4,
+            "closingMeter": 382141.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 660001.9,
+            "closingMeter": 664243.6
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 631159.2,
+            "closingMeter": 634306.1
+          }
+        ],
+        "openingDip": 7519,
+        "closingDip": 27303.8,
+        "receivedLitres": 32987.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 243138.2,
+            "closingMeter": 245329.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 300055.5,
+            "closingMeter": 302663.1
+          }
+        ],
+        "openingDip": 19049.6,
+        "closingDip": 14238.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 657764.1,
+            "closingMeter": 659181.7
+          }
+        ],
+        "openingDip": 4510.2,
+        "closingDip": 3091.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 564725975,
+      "posKobo": 826531446,
+      "transferKobo": 590601967
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-14",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 498056.1,
+            "closingMeter": 501521.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 382141.8,
+            "closingMeter": 384496.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 664243.6,
+            "closingMeter": 666271.9
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 634306.1,
+            "closingMeter": 637421
+          }
+        ],
+        "openingDip": 27303.8,
+        "closingDip": 16315.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 245329.1,
+            "closingMeter": 246995.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 302663.1,
+            "closingMeter": 303694.9
+          }
+        ],
+        "openingDip": 14238.3,
+        "closingDip": 11539.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 659181.7,
+            "closingMeter": 660221.2
+          }
+        ],
+        "openingDip": 3091.1,
+        "closingDip": 17037.4,
+        "receivedLitres": 14987.8,
+        "waybillLitres": 15000,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 432200595,
+      "posKobo": 661476852,
+      "transferKobo": 387674814
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-15",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 501521.5,
+            "closingMeter": 504366.3
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 384496.7,
+            "closingMeter": 388153.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 666271.9,
+            "closingMeter": 670187.1
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 637421,
+            "closingMeter": 641259.1
+          }
+        ],
+        "openingDip": 16315.4,
+        "closingDip": 35038.2,
+        "receivedLitres": 32969.1,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 246995.7,
+            "closingMeter": 248946.8
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 303694.9,
+            "closingMeter": 305423.2
+          }
+        ],
+        "openingDip": 11539.2,
+        "closingDip": 7859.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 660221.2,
+            "closingMeter": 661272.9
+          }
+        ],
+        "openingDip": 17037.4,
+        "closingDip": 15983.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 589879637,
+      "posKobo": 702621190,
+      "transferKobo": 615901434
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-16",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 504366.3,
+            "closingMeter": 506470.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 388153.9,
+            "closingMeter": 390116.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 670187.1,
+            "closingMeter": 672751.6
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 641259.1,
+            "closingMeter": 643716.3
+          }
+        ],
+        "openingDip": 35038.2,
+        "closingDip": 25944.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 248946.8,
+            "closingMeter": 250362.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 305423.2,
+            "closingMeter": 306848.7
+          }
+        ],
+        "openingDip": 7859.4,
+        "closingDip": 37986.6,
+        "receivedLitres": 32969.5,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 661272.9,
+            "closingMeter": 662398.5
+          }
+        ],
+        "openingDip": 15983.8,
+        "closingDip": 14859,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 400666562,
+      "posKobo": 503501480,
+      "transferKobo": 426776500
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-17",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 506470.5,
+            "closingMeter": 509556.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 390116.3,
+            "closingMeter": 392643.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 672751.6,
+            "closingMeter": 675512.7
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 643716.3,
+            "closingMeter": 645151.7
+          }
+        ],
+        "openingDip": 25944.7,
+        "closingDip": 16120.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 250362.6,
+            "closingMeter": 251430.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 306848.7,
+            "closingMeter": 308339.9
+          }
+        ],
+        "openingDip": 37986.6,
+        "closingDip": 35421.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 662398.5,
+            "closingMeter": 663386.1
+          }
+        ],
+        "openingDip": 14859,
+        "closingDip": 13869.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 436447603,
+      "posKobo": 585751520,
+      "transferKobo": 328439725
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-18",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 509556.1,
+            "closingMeter": 511597.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 392643.2,
+            "closingMeter": 394724.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 675512.7,
+            "closingMeter": 677445.8
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 645151.7,
+            "closingMeter": 648214.9
+          }
+        ],
+        "openingDip": 16120.5,
+        "closingDip": 39964.4,
+        "receivedLitres": 32975.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 251430.5,
+            "closingMeter": 253381.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 308339.9,
+            "closingMeter": 310184
+          }
+        ],
+        "openingDip": 35421.9,
+        "closingDip": 31623.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 663386.1,
+            "closingMeter": 664273.6
+          }
+        ],
+        "openingDip": 13869.3,
+        "closingDip": 12981.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 429677365,
+      "posKobo": 553306643,
+      "transferKobo": 429889003
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-19",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 511597.1,
+            "closingMeter": 513693
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 394724.6,
+            "closingMeter": 397454.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 677445.8,
+            "closingMeter": 681129.4
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 648214.9,
+            "closingMeter": 652174.2
+          }
+        ],
+        "openingDip": 39964.4,
+        "closingDip": 27493,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 253381.1,
+            "closingMeter": 256312.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 310184,
+            "closingMeter": 312144.4
+          }
+        ],
+        "openingDip": 31623.9,
+        "closingDip": 26725.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 664273.6,
+            "closingMeter": 664791.3
+          }
+        ],
+        "openingDip": 12981.2,
+        "closingDip": 12462.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 512369837,
+      "posKobo": 815115734,
+      "transferKobo": 485164560
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-20",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 513693,
+            "closingMeter": 516343.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 397454.6,
+            "closingMeter": 400040
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 681129.4,
+            "closingMeter": 683296.8
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 652174.2,
+            "closingMeter": 655379.4
+          }
+        ],
+        "openingDip": 27493,
+        "closingDip": 16867.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 256312.7,
+            "closingMeter": 258775.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 312144.4,
+            "closingMeter": 313937.1
+          }
+        ],
+        "openingDip": 26725.9,
+        "closingDip": 22470.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 664791.3,
+            "closingMeter": 665707.7
+          }
+        ],
+        "openingDip": 12462.5,
+        "closingDip": 11544.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 482384153,
+      "posKobo": 604471730,
+      "transferKobo": 523561692
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-21",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 516343.2,
+            "closingMeter": 519344.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 400040,
+            "closingMeter": 402176.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 683296.8,
+            "closingMeter": 685532.5
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 655379.4,
+            "closingMeter": 657988.6
+          }
+        ],
+        "openingDip": 16867.3,
+        "closingDip": 39850.2,
+        "receivedLitres": 32971.9,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 258775.6,
+            "closingMeter": 260323.9
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 313937.1,
+            "closingMeter": 316972
+          }
+        ],
+        "openingDip": 22470.7,
+        "closingDip": 17882.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 665707.7,
+            "closingMeter": 666597.3
+          }
+        ],
+        "openingDip": 11544.7,
+        "closingDip": 10654.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 514815727,
+      "posKobo": 569408037,
+      "transferKobo": 503066488
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-22",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 519344.6,
+            "closingMeter": 522787.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 402176.2,
+            "closingMeter": 404732.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 685532.5,
+            "closingMeter": 689546.3
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 657988.6,
+            "closingMeter": 662968.7
+          }
+        ],
+        "openingDip": 39850.2,
+        "closingDip": 24826.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 260323.9,
+            "closingMeter": 262281.8
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 316972,
+            "closingMeter": 318399.5
+          }
+        ],
+        "openingDip": 17882.9,
+        "closingDip": 14493,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 666597.3,
+            "closingMeter": 667990.2
+          }
+        ],
+        "openingDip": 10654.4,
+        "closingDip": 9261.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 673560358,
+      "posKobo": 773959366,
+      "transferKobo": 540786477
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-22",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 519344.6,
+            "closingMeter": 522787.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 402176.2,
+            "closingMeter": 404732.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 685532.5,
+            "closingMeter": 689546.3
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 657988.6,
+            "closingMeter": 662968.7
+          }
+        ],
+        "openingDip": 39850.2,
+        "closingDip": 24826.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 260323.9,
+            "closingMeter": 262281.8
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 316972,
+            "closingMeter": 318399.5
+          }
+        ],
+        "openingDip": 17882.9,
+        "closingDip": 14493,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 666597.3,
+            "closingMeter": 667990.2
+          }
+        ],
+        "openingDip": 10654.4,
+        "closingDip": 9261.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 673560358,
+      "posKobo": 773959366,
+      "transferKobo": 540786477
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-23",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 522787.1,
+            "closingMeter": 526476.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 404732.5,
+            "closingMeter": 407264.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 689546.3,
+            "closingMeter": 691399.4
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 662968.7,
+            "closingMeter": 666542.2
+          }
+        ],
+        "openingDip": 24826.2,
+        "closingDip": 13178.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 262281.8,
+            "closingMeter": 263517.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 318399.5,
+            "closingMeter": 319208.8
+          }
+        ],
+        "openingDip": 14493,
+        "closingDip": 12446.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 667990.2,
+            "closingMeter": 669374.1
+          }
+        ],
+        "openingDip": 9261.6,
+        "closingDip": 7874.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 435817755,
+      "posKobo": 641826090,
+      "transferKobo": 436467593
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-24",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 526476.2,
+            "closingMeter": 529153.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 407264.6,
+            "closingMeter": 411461.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 691399.4,
+            "closingMeter": 695664.1
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 666542.2,
+            "closingMeter": 668948.1
+          }
+        ],
+        "openingDip": 13178.1,
+        "closingDip": 32609.5,
+        "receivedLitres": 32980.8,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 263517.5,
+            "closingMeter": 266449
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 319208.8,
+            "closingMeter": 321023.6
+          }
+        ],
+        "openingDip": 12446.3,
+        "closingDip": 7700.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 669374.1,
+            "closingMeter": 670809.3
+          }
+        ],
+        "openingDip": 7874.5,
+        "closingDip": 6439.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 602603762,
+      "posKobo": 800146734,
+      "transferKobo": 607912923
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-25",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 529153.2,
+            "closingMeter": 531622.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 411461.2,
+            "closingMeter": 413975.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 695664.1,
+            "closingMeter": 697788.4
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 668948.1,
+            "closingMeter": 672302
+          }
+        ],
+        "openingDip": 32609.5,
+        "closingDip": 22138.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 266449,
+            "closingMeter": 267680.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 321023.6,
+            "closingMeter": 322347.5
+          }
+        ],
+        "openingDip": 7700.9,
+        "closingDip": 38128.2,
+        "receivedLitres": 32988,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 670809.3,
+            "closingMeter": 672200.1
+          }
+        ],
+        "openingDip": 6439.1,
+        "closingDip": 5047.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 376601077,
+      "posKobo": 649719540,
+      "transferKobo": 434496848
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-26",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 531622.8,
+            "closingMeter": 533768.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 413975.7,
+            "closingMeter": 415704.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 697788.4,
+            "closingMeter": 700793.6
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 672302,
+            "closingMeter": 673885.9
+          }
+        ],
+        "openingDip": 22138.6,
+        "closingDip": 13666.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 267680.6,
+            "closingMeter": 269772.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 322347.5,
+            "closingMeter": 324471.1
+          }
+        ],
+        "openingDip": 38128.2,
+        "closingDip": 33904.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 672200.1,
+            "closingMeter": 673179
+          }
+        ],
+        "openingDip": 5047.7,
+        "closingDip": 4067.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 425657273,
+      "posKobo": 592413559,
+      "transferKobo": 393544341
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-27",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 533768.7,
+            "closingMeter": 536212.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 415704.8,
+            "closingMeter": 418879.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 700793.6,
+            "closingMeter": 704403.4
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 673885.9,
+            "closingMeter": 677136.8
+          }
+        ],
+        "openingDip": 13666.2,
+        "closingDip": 34155.7,
+        "receivedLitres": 32985.2,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 269772.7,
+            "closingMeter": 272476.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 324471.1,
+            "closingMeter": 325900.2
+          }
+        ],
+        "openingDip": 33904.4,
+        "closingDip": 29769.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 673179,
+            "closingMeter": 674332.5
+          }
+        ],
+        "openingDip": 4067.5,
+        "closingDip": 2912.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 523776081,
+      "posKobo": 688511971,
+      "transferKobo": 591087713
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-28",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 536212.4,
+            "closingMeter": 537821.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 418879.5,
+            "closingMeter": 421371.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 704403.4,
+            "closingMeter": 706503.7
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 677136.8,
+            "closingMeter": 679392.8
+          }
+        ],
+        "openingDip": 34155.7,
+        "closingDip": 25686,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 272476.1,
+            "closingMeter": 274818.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 325900.2,
+            "closingMeter": 328457.3
+          }
+        ],
+        "openingDip": 29769.5,
+        "closingDip": 24860.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 674332.5,
+            "closingMeter": 675235
+          }
+        ],
+        "openingDip": 2912.7,
+        "closingDip": 16998.7,
+        "receivedLitres": 14989,
+        "waybillLitres": 15000,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 493430487,
+      "posKobo": 650610411,
+      "transferKobo": 336194513
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-29",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 537821.1,
+            "closingMeter": 541900.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 421371.1,
+            "closingMeter": 423916.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 706503.7,
+            "closingMeter": 711207.2
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 679392.8,
+            "closingMeter": 682737
+          }
+        ],
+        "openingDip": 25686,
+        "closingDip": 10994.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 274818.7,
+            "closingMeter": 275947.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 328457.3,
+            "closingMeter": 330277.3
+          }
+        ],
+        "openingDip": 24860.5,
+        "closingDip": 21905.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 675235,
+            "closingMeter": 676235.3
+          }
+        ],
+        "openingDip": 16998.7,
+        "closingDip": 15998.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 517438736,
+      "posKobo": 835289467,
+      "transferKobo": 505637489
+    }
+  },
+  {
+    "stationId": "NGT-LAG-01",
+    "date": "2026-11-30",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 541900.5,
+            "closingMeter": 544896
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 423916.2,
+            "closingMeter": 426391.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 711207.2,
+            "closingMeter": 713123.2
+          },
+          {
+            "pumpId": "PMS-4",
+            "openingMeter": 682737,
+            "closingMeter": 684313.8
+          }
+        ],
+        "openingDip": 10994.2,
+        "closingDip": 34976.5,
+        "receivedLitres": 32968.5,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 275947.7,
+            "closingMeter": 277033.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 330277.3,
+            "closingMeter": 331867.7
+          }
+        ],
+        "openingDip": 21905.8,
+        "closingDip": 19228.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 676235.3,
+            "closingMeter": 676865.9
+          }
+        ],
+        "openingDip": 15998.9,
+        "closingDip": 15367.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 413994796,
+      "posKobo": 550610067,
+      "transferKobo": 272447122
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-01",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 639999,
+            "closingMeter": 644034.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 409086,
+            "closingMeter": 412392.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 667288,
+            "closingMeter": 669536.3
+          }
+        ],
+        "openingDip": 40000,
+        "closingDip": 30403.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 719072,
+            "closingMeter": 720366.2
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 896467,
+            "closingMeter": 897896.6
+          }
+        ],
+        "openingDip": 30000,
+        "closingDip": 27275.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 258867,
+            "closingMeter": 259989.7
+          }
+        ],
+        "openingDip": 16000,
+        "closingDip": 14874.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 373475552,
+      "posKobo": 507521728,
+      "transferKobo": 483088094
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-02",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 644034.9,
+            "closingMeter": 648720.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 412392.7,
+            "closingMeter": 415532.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 669536.3,
+            "closingMeter": 672273.6
+          }
+        ],
+        "openingDip": 30403.4,
+        "closingDip": 19829,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 720366.2,
+            "closingMeter": 721248.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 897896.6,
+            "closingMeter": 899421.3
+          }
+        ],
+        "openingDip": 27275.8,
+        "closingDip": 24866,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 259989.7,
+            "closingMeter": 260964.6
+          }
+        ],
+        "openingDip": 14874.6,
+        "closingDip": 13898.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 443004264,
+      "posKobo": 540828819,
+      "transferKobo": 419610835
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-03",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 648720.4,
+            "closingMeter": 652890.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 415532.9,
+            "closingMeter": 418971.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 672273.6,
+            "closingMeter": 676920.2
+          }
+        ],
+        "openingDip": 19829,
+        "closingDip": 7553.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 721248.6,
+            "closingMeter": 723725.9
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 899421.3,
+            "closingMeter": 901873.2
+          }
+        ],
+        "openingDip": 24866,
+        "closingDip": 19929.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 260964.6,
+            "closingMeter": 261813
+          }
+        ],
+        "openingDip": 13898.2,
+        "closingDip": 13048.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 539153437,
+      "posKobo": 754217051,
+      "transferKobo": 544155984
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-04",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 652890.9,
+            "closingMeter": 654844.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 418971.2,
+            "closingMeter": 421586.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 676920.2,
+            "closingMeter": 680504.8
+          }
+        ],
+        "openingDip": 7553.1,
+        "closingDip": 32361.1,
+        "receivedLitres": 32967.7,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 723725.9,
+            "closingMeter": 726502.9
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 901873.2,
+            "closingMeter": 903525.6
+          }
+        ],
+        "openingDip": 19929.8,
+        "closingDip": 15497.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 261813,
+            "closingMeter": 262613.2
+          }
+        ],
+        "openingDip": 13048.2,
+        "closingDip": 12247.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 463494022,
+      "posKobo": 518795340,
+      "transferKobo": 402959431
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-05",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 654844.4,
+            "closingMeter": 658039.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 421586.7,
+            "closingMeter": 425837.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 680504.8,
+            "closingMeter": 686055.2
+          }
+        ],
+        "openingDip": 32361.1,
+        "closingDip": 19345.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 726502.9,
+            "closingMeter": 727444.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 903525.6,
+            "closingMeter": 904861.3
+          }
+        ],
+        "openingDip": 15497.2,
+        "closingDip": 13217.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 262613.2,
+            "closingMeter": 263308.6
+          }
+        ],
+        "openingDip": 12247.2,
+        "closingDip": 11552.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 476195666,
+      "posKobo": 562401876,
+      "transferKobo": 545113837
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-06",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 658039.8,
+            "closingMeter": 661718.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 425837.9,
+            "closingMeter": 429831.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 686055.2,
+            "closingMeter": 689178.1
+          }
+        ],
+        "openingDip": 19345.3,
+        "closingDip": 8538.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 727444.7,
+            "closingMeter": 728640.9
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 904861.3,
+            "closingMeter": 906178.3
+          }
+        ],
+        "openingDip": 13217.7,
+        "closingDip": 10702.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 263308.6,
+            "closingMeter": 263815.4
+          }
+        ],
+        "openingDip": 11552.2,
+        "closingDip": 11044.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 448106851,
+      "posKobo": 527713089,
+      "transferKobo": 401789352
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-07",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 661718.8,
+            "closingMeter": 667112.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 429831.7,
+            "closingMeter": 435250.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 689178.1,
+            "closingMeter": 692319.7
+          }
+        ],
+        "openingDip": 8538.9,
+        "closingDip": 27549.5,
+        "receivedLitres": 32982.5,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 728640.9,
+            "closingMeter": 730841.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 906178.3,
+            "closingMeter": 908063.4
+          }
+        ],
+        "openingDip": 10702.4,
+        "closingDip": 6614.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 263815.4,
+            "closingMeter": 264369.8
+          }
+        ],
+        "openingDip": 11044.9,
+        "closingDip": 10490.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 617868208,
+      "posKobo": 823688184,
+      "transferKobo": 423249077
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-08",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 667112.1,
+            "closingMeter": 673842.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 435250.1,
+            "closingMeter": 438613.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 692319.7,
+            "closingMeter": 696603.6
+          }
+        ],
+        "openingDip": 27549.5,
+        "closingDip": 13147.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 730841.4,
+            "closingMeter": 732707.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 908063.4,
+            "closingMeter": 911017.5
+          }
+        ],
+        "openingDip": 6614.2,
+        "closingDip": 34784.6,
+        "receivedLitres": 32995.4,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 264369.8,
+            "closingMeter": 265181.2
+          }
+        ],
+        "openingDip": 10490.4,
+        "closingDip": 9678.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 607320825,
+      "posKobo": 775347234,
+      "transferKobo": 640587073
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-09",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 673842.5,
+            "closingMeter": 678218.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 438613.1,
+            "closingMeter": 443400.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 696603.6,
+            "closingMeter": 701650.9
+          }
+        ],
+        "openingDip": 13147.8,
+        "closingDip": 31911.1,
+        "receivedLitres": 32975.9,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 732707.7,
+            "closingMeter": 735197.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 911017.5,
+            "closingMeter": 912685.2
+          }
+        ],
+        "openingDip": 34784.6,
+        "closingDip": 30624.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 265181.2,
+            "closingMeter": 266218.4
+          }
+        ],
+        "openingDip": 9678.1,
+        "closingDip": 8640.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 566242369,
+      "posKobo": 714733555,
+      "transferKobo": 678398865
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-10",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 678218.4,
+            "closingMeter": 683149
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 443400.4,
+            "closingMeter": 447608.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 701650.9,
+            "closingMeter": 705982.7
+          }
+        ],
+        "openingDip": 31911.1,
+        "closingDip": 18420.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 735197.4,
+            "closingMeter": 737520.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 912685.2,
+            "closingMeter": 914873
+          }
+        ],
+        "openingDip": 30624.9,
+        "closingDip": 26110.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 266218.4,
+            "closingMeter": 266946.2
+          }
+        ],
+        "openingDip": 8640.5,
+        "closingDip": 7911.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 628332691,
+      "posKobo": 835662866,
+      "transferKobo": 424402593
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-11",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 683149,
+            "closingMeter": 686770.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 447608.3,
+            "closingMeter": 450679.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 705982.7,
+            "closingMeter": 708888.5
+          }
+        ],
+        "openingDip": 18420.9,
+        "closingDip": 8807,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 737520.7,
+            "closingMeter": 739184.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 914873,
+            "closingMeter": 916682.2
+          }
+        ],
+        "openingDip": 26110.6,
+        "closingDip": 22633.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 266946.2,
+            "closingMeter": 267851.3
+          }
+        ],
+        "openingDip": 7911.2,
+        "closingDip": 7005.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 411109377,
+      "posKobo": 507681198,
+      "transferKobo": 504174753
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-12",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 686770.5,
+            "closingMeter": 688926.3
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 450679.2,
+            "closingMeter": 453486.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 708888.5,
+            "closingMeter": 712416.8
+          }
+        ],
+        "openingDip": 8807,
+        "closingDip": 33277.8,
+        "receivedLitres": 32974.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 739184.4,
+            "closingMeter": 740369.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 916682.2,
+            "closingMeter": 917729.7
+          }
+        ],
+        "openingDip": 22633.1,
+        "closingDip": 20398.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 267851.3,
+            "closingMeter": 268569.2
+          }
+        ],
+        "openingDip": 7005.4,
+        "closingDip": 6287.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 320571388,
+      "posKobo": 451909851,
+      "transferKobo": 335893073
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-13",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 688926.3,
+            "closingMeter": 691928.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 453486.1,
+            "closingMeter": 455638.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 712416.8,
+            "closingMeter": 715288.3
+          }
+        ],
+        "openingDip": 33277.8,
+        "closingDip": 25252.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 740369.6,
+            "closingMeter": 742387.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 917729.7,
+            "closingMeter": 919541.7
+          }
+        ],
+        "openingDip": 20398.6,
+        "closingDip": 16565.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 268569.2,
+            "closingMeter": 269416.9
+          }
+        ],
+        "openingDip": 6287.6,
+        "closingDip": 5437.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 447099294,
+      "posKobo": 489585934,
+      "transferKobo": 372072143
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-14",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 691928.2,
+            "closingMeter": 694624.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 455638.9,
+            "closingMeter": 458583.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 715288.3,
+            "closingMeter": 717734.6
+          }
+        ],
+        "openingDip": 25252.3,
+        "closingDip": 17165.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 742387.1,
+            "closingMeter": 743947.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 919541.7,
+            "closingMeter": 920826.9
+          }
+        ],
+        "openingDip": 16565.6,
+        "closingDip": 13716.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 269416.9,
+            "closingMeter": 270474.3
+          }
+        ],
+        "openingDip": 5437.9,
+        "closingDip": 4378.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 396277293,
+      "posKobo": 498419876,
+      "transferKobo": 333049978
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-15",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 694624.7,
+            "closingMeter": 697884.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 458583.5,
+            "closingMeter": 463563.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 717734.6,
+            "closingMeter": 720843.9
+          }
+        ],
+        "openingDip": 17165.2,
+        "closingDip": 38799.2,
+        "receivedLitres": 32986.8,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 743947.5,
+            "closingMeter": 745766.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 920826.9,
+            "closingMeter": 922908.8
+          }
+        ],
+        "openingDip": 13716.2,
+        "closingDip": 9810.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 270474.3,
+            "closingMeter": 271334.6
+          }
+        ],
+        "openingDip": 4378.1,
+        "closingDip": 3518,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 491880042,
+      "posKobo": 601431491,
+      "transferKobo": 541612939
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-16",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 697884.6,
+            "closingMeter": 701314.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 463563.6,
+            "closingMeter": 466984.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 720843.9,
+            "closingMeter": 725608.2
+          }
+        ],
+        "openingDip": 38799.2,
+        "closingDip": 27177.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 745766.7,
+            "closingMeter": 747307.2
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 922908.8,
+            "closingMeter": 924267.9
+          }
+        ],
+        "openingDip": 9810.4,
+        "closingDip": 6905.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 271334.6,
+            "closingMeter": 272196.1
+          }
+        ],
+        "openingDip": 3518,
+        "closingDip": 17650.6,
+        "receivedLitres": 14995.1,
+        "waybillLitres": 15000,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 466352989,
+      "posKobo": 655821318,
+      "transferKobo": 423553677
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-17",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 701314.1,
+            "closingMeter": 706801.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 466984.3,
+            "closingMeter": 471068.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 725608.2,
+            "closingMeter": 730923.5
+          }
+        ],
+        "openingDip": 27177.7,
+        "closingDip": 12293.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 747307.2,
+            "closingMeter": 748149.9
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 924267.9,
+            "closingMeter": 925827.5
+          }
+        ],
+        "openingDip": 6905.7,
+        "closingDip": 37485.3,
+        "receivedLitres": 32982.8,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 272196.1,
+            "closingMeter": 272896.3
+          }
+        ],
+        "openingDip": 17650.6,
+        "closingDip": 16949.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 517961760,
+      "posKobo": 754368774,
+      "transferKobo": 504339881
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-18",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 706801.1,
+            "closingMeter": 711599.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 471068.3,
+            "closingMeter": 475718.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 730923.5,
+            "closingMeter": 736010.1
+          }
+        ],
+        "openingDip": 12293.7,
+        "closingDip": 30730.7,
+        "receivedLitres": 32994.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 748149.9,
+            "closingMeter": 749863.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 925827.5,
+            "closingMeter": 927009.2
+          }
+        ],
+        "openingDip": 37485.3,
+        "closingDip": 34587.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 272896.3,
+            "closingMeter": 273650.6
+          }
+        ],
+        "openingDip": 16949.8,
+        "closingDip": 16195.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 516520823,
+      "posKobo": 765711223,
+      "transferKobo": 526853310
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-19",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 711599.4,
+            "closingMeter": 715748.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 475718.5,
+            "closingMeter": 480316.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 736010.1,
+            "closingMeter": 739986.1
+          }
+        ],
+        "openingDip": 30730.7,
+        "closingDip": 18004.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 749863.1,
+            "closingMeter": 751720.3
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 927009.2,
+            "closingMeter": 928395.4
+          }
+        ],
+        "openingDip": 34587.9,
+        "closingDip": 31340.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 273650.6,
+            "closingMeter": 274171.7
+          }
+        ],
+        "openingDip": 16195.3,
+        "closingDip": 15673.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 428414111,
+      "posKobo": 593190110,
+      "transferKobo": 623856427
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-21",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 720387.6,
+            "closingMeter": 724706.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 483861.5,
+            "closingMeter": 488618.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 746376.1,
+            "closingMeter": 749721.2
+          }
+        ],
+        "openingDip": 3416.1,
+        "closingDip": 23943.4,
+        "receivedLitres": 32980,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 754502.3,
+            "closingMeter": 755945.5
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 930368.9,
+            "closingMeter": 932251.1
+          }
+        ],
+        "openingDip": 26584,
+        "closingDip": 23253.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 274984,
+            "closingMeter": 276411.9
+          }
+        ],
+        "openingDip": 14860,
+        "closingDip": 13433.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 601117697,
+      "posKobo": 754098192,
+      "transferKobo": 384259836
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-22",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 724706.1,
+            "closingMeter": 729097.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 488618.8,
+            "closingMeter": 492519.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 749721.2,
+            "closingMeter": 754624.7
+          }
+        ],
+        "openingDip": 23943.4,
+        "closingDip": 10738.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 755945.5,
+            "closingMeter": 757762.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 932251.1,
+            "closingMeter": 934491.7
+          }
+        ],
+        "openingDip": 23253.2,
+        "closingDip": 19191.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 276411.9,
+            "closingMeter": 277295.8
+          }
+        ],
+        "openingDip": 13433.3,
+        "closingDip": 12549.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 493908807,
+      "posKobo": 805034353,
+      "transferKobo": 532471217
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-23",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 729097.1,
+            "closingMeter": 731667.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 492519.8,
+            "closingMeter": 495955.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 754624.7,
+            "closingMeter": 757862.8
+          }
+        ],
+        "openingDip": 10738.6,
+        "closingDip": 34443,
+        "receivedLitres": 32970.6,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 757762.7,
+            "closingMeter": 758755.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 934491.7,
+            "closingMeter": 935659.3
+          }
+        ],
+        "openingDip": 19191.6,
+        "closingDip": 17030.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 277295.8,
+            "closingMeter": 277959.9
+          }
+        ],
+        "openingDip": 12549.3,
+        "closingDip": 11885.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 387717878,
+      "posKobo": 462581322,
+      "transferKobo": 360094922
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-24",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 731667.7,
+            "closingMeter": 736080.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 495955.9,
+            "closingMeter": 499160.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 757862.8,
+            "closingMeter": 762167
+          }
+        ],
+        "openingDip": 34443,
+        "closingDip": 22493.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 758755.7,
+            "closingMeter": 760830.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 935659.3,
+            "closingMeter": 937449.1
+          }
+        ],
+        "openingDip": 17030.8,
+        "closingDip": 13167.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 277959.9,
+            "closingMeter": 278525.7
+          }
+        ],
+        "openingDip": 11885.1,
+        "closingDip": 11318.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 556880798,
+      "posKobo": 592975558,
+      "transferKobo": 498809085
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-25",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 736080.1,
+            "closingMeter": 738985.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 499160.1,
+            "closingMeter": 503651.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 762167,
+            "closingMeter": 764922.1
+          }
+        ],
+        "openingDip": 22493.7,
+        "closingDip": 12315.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 760830.7,
+            "closingMeter": 762598.6
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 937449.1,
+            "closingMeter": 939643.5
+          }
+        ],
+        "openingDip": 13167.8,
+        "closingDip": 9206.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 278525.7,
+            "closingMeter": 279316
+          }
+        ],
+        "openingDip": 11318.6,
+        "closingDip": 10527.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 390630212,
+      "posKobo": 621621090,
+      "transferKobo": 505230888
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-26",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 738985.4,
+            "closingMeter": 741501.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 503651.2,
+            "closingMeter": 508269.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 764922.1,
+            "closingMeter": 769030.3
+          }
+        ],
+        "openingDip": 12315.7,
+        "closingDip": 34031.9,
+        "receivedLitres": 32972.4,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 762598.6,
+            "closingMeter": 764313.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 939643.5,
+            "closingMeter": 940879
+          }
+        ],
+        "openingDip": 9206.6,
+        "closingDip": 6255.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 279316,
+            "closingMeter": 280413.3
+          }
+        ],
+        "openingDip": 10527.8,
+        "closingDip": 9430,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 472740921,
+      "posKobo": 593901901,
+      "transferKobo": 476927188
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-27",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 741501.8,
+            "closingMeter": 743590.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 508269.4,
+            "closingMeter": 511972.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 769030.3,
+            "closingMeter": 772382.8
+          }
+        ],
+        "openingDip": 34031.9,
+        "closingDip": 24872.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 764313.1,
+            "closingMeter": 765349
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 940879,
+            "closingMeter": 942718.9
+          }
+        ],
+        "openingDip": 6255.3,
+        "closingDip": 36349.6,
+        "receivedLitres": 32972.5,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 280413.3,
+            "closingMeter": 281817
+          }
+        ],
+        "openingDip": 9430,
+        "closingDip": 8025.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 417203459,
+      "posKobo": 520805537,
+      "transferKobo": 435675232
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-28",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 743590.4,
+            "closingMeter": 748983.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 511972.2,
+            "closingMeter": 517013.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 772382.8,
+            "closingMeter": 775515.7
+          }
+        ],
+        "openingDip": 24872.9,
+        "closingDip": 11288.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 765349,
+            "closingMeter": 767347.4
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 942718.9,
+            "closingMeter": 944610.2
+          }
+        ],
+        "openingDip": 36349.6,
+        "closingDip": 32455.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 281817,
+            "closingMeter": 282496.1
+          }
+        ],
+        "openingDip": 8025.2,
+        "closingDip": 7345.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 477758459,
+      "posKobo": 657226467,
+      "transferKobo": 687824930
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-29",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 748983.7,
+            "closingMeter": 752371.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 517013.5,
+            "closingMeter": 520138.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 775515.7,
+            "closingMeter": 779860.1
+          }
+        ],
+        "openingDip": 11288.1,
+        "closingDip": 33380.7,
+        "receivedLitres": 32980.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 767347.4,
+            "closingMeter": 768247.1
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 944610.2,
+            "closingMeter": 945916.8
+          }
+        ],
+        "openingDip": 32455.8,
+        "closingDip": 30246.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 282496.1,
+            "closingMeter": 283866.6
+          }
+        ],
+        "openingDip": 7345.1,
+        "closingDip": 5974.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 398987821,
+      "posKobo": 637594127,
+      "transferKobo": 421178424
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "date": "2026-11-30",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 752371.9,
+            "closingMeter": 755888
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 520138.2,
+            "closingMeter": 522761.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 779860.1,
+            "closingMeter": 783149.5
+          }
+        ],
+        "openingDip": 33380.7,
+        "closingDip": 23933.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 768247.1,
+            "closingMeter": 769449.7
+          },
+          {
+            "pumpId": "AGO-2",
+            "openingMeter": 945916.8,
+            "closingMeter": 948341.1
+          }
+        ],
+        "openingDip": 30246.7,
+        "closingDip": 26620.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 283866.6,
+            "closingMeter": 285341.9
+          }
+        ],
+        "openingDip": 5974.8,
+        "closingDip": 4497.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 473994400,
+      "posKobo": 529501756,
+      "transferKobo": 493938428
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-01",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 325347,
+            "closingMeter": 330187.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 664234,
+            "closingMeter": 667000
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 649732,
+            "closingMeter": 653365.7
+          }
+        ],
+        "openingDip": 40000,
+        "closingDip": 28743.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 550181,
+            "closingMeter": 554837
+          }
+        ],
+        "openingDip": 30000,
+        "closingDip": 25335.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 278228,
+            "closingMeter": 279455
+          }
+        ],
+        "openingDip": 16000,
+        "closingDip": 14772.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 491087216,
+      "posKobo": 623032978,
+      "transferKobo": 641120483
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-02",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 330187.5,
+            "closingMeter": 335590
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 667000,
+            "closingMeter": 670807.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 653365.7,
+            "closingMeter": 658884.6
+          }
+        ],
+        "openingDip": 28743.7,
+        "closingDip": 13993.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 554837,
+            "closingMeter": 559236
+          }
+        ],
+        "openingDip": 25335.6,
+        "closingDip": 20931.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 279455,
+            "closingMeter": 280163.8
+          }
+        ],
+        "openingDip": 14772.2,
+        "closingDip": 14062.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 667751508,
+      "posKobo": 809575627,
+      "transferKobo": 516015781
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-03",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 335590,
+            "closingMeter": 338552.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 670807.6,
+            "closingMeter": 673944.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 658884.6,
+            "closingMeter": 662209.1
+          }
+        ],
+        "openingDip": 13993.5,
+        "closingDip": 37551.5,
+        "receivedLitres": 32996.8,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 559236,
+            "closingMeter": 562212.8
+          }
+        ],
+        "openingDip": 20931.2,
+        "closingDip": 17947.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 280163.8,
+            "closingMeter": 281339.7
+          }
+        ],
+        "openingDip": 14062.6,
+        "closingDip": 12885,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 384737979,
+      "posKobo": 543876145,
+      "transferKobo": 454771934
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-04",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 338552.9,
+            "closingMeter": 342400.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 673944.4,
+            "closingMeter": 677361.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 662209.1,
+            "closingMeter": 666529.9
+          }
+        ],
+        "openingDip": 37551.5,
+        "closingDip": 25957.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 562212.8,
+            "closingMeter": 565166.6
+          }
+        ],
+        "openingDip": 17947.1,
+        "closingDip": 14988.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 281339.7,
+            "closingMeter": 282785.9
+          }
+        ],
+        "openingDip": 12885,
+        "closingDip": 11437,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 544845278,
+      "posKobo": 590401085,
+      "transferKobo": 485109893
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-05",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 342400.5,
+            "closingMeter": 345423.3
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 677361.9,
+            "closingMeter": 681637.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 666529.9,
+            "closingMeter": 669340.7
+          }
+        ],
+        "openingDip": 25957.3,
+        "closingDip": 15837.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 565166.6,
+            "closingMeter": 568911.9
+          }
+        ],
+        "openingDip": 14988.5,
+        "closingDip": 11237.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 282785.9,
+            "closingMeter": 283524.5
+          }
+        ],
+        "openingDip": 11437,
+        "closingDip": 10698.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 508319840,
+      "posKobo": 611193896,
+      "transferKobo": 364774625
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-06",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 345423.3,
+            "closingMeter": 349754.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 681637.9,
+            "closingMeter": 685864.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 669340.7,
+            "closingMeter": 673072.2
+          }
+        ],
+        "openingDip": 15837.6,
+        "closingDip": 36514.2,
+        "receivedLitres": 32990.6,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 568911.9,
+            "closingMeter": 572372
+          }
+        ],
+        "openingDip": 11237.8,
+        "closingDip": 7775.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 283524.5,
+            "closingMeter": 284928.4
+          }
+        ],
+        "openingDip": 10698.3,
+        "closingDip": 9292.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 529678870,
+      "posKobo": 671181630,
+      "transferKobo": 539062064
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-07",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 349754.5,
+            "closingMeter": 352428.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 685864.1,
+            "closingMeter": 688665.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 673072.2,
+            "closingMeter": 675971.7
+          }
+        ],
+        "openingDip": 36514.2,
+        "closingDip": 28147.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 572372,
+            "closingMeter": 577241.5
+          }
+        ],
+        "openingDip": 7775.6,
+        "closingDip": 35889.6,
+        "receivedLitres": 32987.6,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 284928.4,
+            "closingMeter": 285547.1
+          }
+        ],
+        "openingDip": 9292.9,
+        "closingDip": 8673.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 401985121,
+      "posKobo": 616151463,
+      "transferKobo": 413835909
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-08",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 352428.6,
+            "closingMeter": 357188.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 688665.2,
+            "closingMeter": 692073.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 675971.7,
+            "closingMeter": 680505.5
+          }
+        ],
+        "openingDip": 28147.5,
+        "closingDip": 15420.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 577241.5,
+            "closingMeter": 581776.8
+          }
+        ],
+        "openingDip": 35889.6,
+        "closingDip": 31353.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 285547.1,
+            "closingMeter": 287019.7
+          }
+        ],
+        "openingDip": 8673.5,
+        "closingDip": 7198.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 627195553,
+      "posKobo": 799401859,
+      "transferKobo": 485278570
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-09",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 357188.2,
+            "closingMeter": 360074.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 692073.8,
+            "closingMeter": 695513.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 680505.5,
+            "closingMeter": 683227
+          }
+        ],
+        "openingDip": 15420.6,
+        "closingDip": 39344.6,
+        "receivedLitres": 32972.4,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 581776.8,
+            "closingMeter": 585190.8
+          }
+        ],
+        "openingDip": 31353.4,
+        "closingDip": 27939.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 287019.7,
+            "closingMeter": 288340.9
+          }
+        ],
+        "openingDip": 7198.4,
+        "closingDip": 5878.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 378783257,
+      "posKobo": 571997416,
+      "transferKobo": 465639917
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-10",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 360074.9,
+            "closingMeter": 364787.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 695513.3,
+            "closingMeter": 698997.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 683227,
+            "closingMeter": 686820.8
+          }
+        ],
+        "openingDip": 39344.6,
+        "closingDip": 27528.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 585190.8,
+            "closingMeter": 587999.4
+          }
+        ],
+        "openingDip": 27939.1,
+        "closingDip": 25125.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 288340.9,
+            "closingMeter": 289378.3
+          }
+        ],
+        "openingDip": 5878.5,
+        "closingDip": 4839.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 475856163,
+      "posKobo": 607165725,
+      "transferKobo": 488322878
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-11",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 364787.5,
+            "closingMeter": 368623.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 698997.3,
+            "closingMeter": 703359.6
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 686820.8,
+            "closingMeter": 690197.3
+          }
+        ],
+        "openingDip": 27528.2,
+        "closingDip": 15950,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 587999.4,
+            "closingMeter": 590570.2
+          }
+        ],
+        "openingDip": 25125.7,
+        "closingDip": 22554.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 289378.3,
+            "closingMeter": 290225.3
+          }
+        ],
+        "openingDip": 4839.4,
+        "closingDip": 3991.5,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 510094492,
+      "posKobo": 545390279,
+      "transferKobo": 444543223
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-12",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 368623.4,
+            "closingMeter": 371260.3
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 703359.6,
+            "closingMeter": 706951
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 690197.3,
+            "closingMeter": 692415.7
+          }
+        ],
+        "openingDip": 15950,
+        "closingDip": 40477.8,
+        "receivedLitres": 32980.4,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 590570.2,
+            "closingMeter": 593611.4
+          }
+        ],
+        "openingDip": 22554.3,
+        "closingDip": 19512.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 290225.3,
+            "closingMeter": 291657.7
+          }
+        ],
+        "openingDip": 3991.5,
+        "closingDip": 17552.6,
+        "receivedLitres": 14995.9,
+        "waybillLitres": 15000,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 427618091,
+      "posKobo": 528982854,
+      "transferKobo": 374631887
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-13",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 371260.3,
+            "closingMeter": 374446.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 706951,
+            "closingMeter": 709476.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 692415.7,
+            "closingMeter": 697661.2
+          }
+        ],
+        "openingDip": 40477.8,
+        "closingDip": 29524.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 593611.4,
+            "closingMeter": 596409.8
+          }
+        ],
+        "openingDip": 19512.9,
+        "closingDip": 16709.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 291657.7,
+            "closingMeter": 292472.6
+          }
+        ],
+        "openingDip": 17552.6,
+        "closingDip": 16736.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 485975784,
+      "posKobo": 655723870,
+      "transferKobo": 323791234
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-14",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 374446.2,
+            "closingMeter": 379365.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 709476.7,
+            "closingMeter": 712214.8
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 697661.2,
+            "closingMeter": 702221.3
+          }
+        ],
+        "openingDip": 29524.7,
+        "closingDip": 17290.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 596409.8,
+            "closingMeter": 600603.6
+          }
+        ],
+        "openingDip": 16709.1,
+        "closingDip": 12507.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 292472.6,
+            "closingMeter": 293391.9
+          }
+        ],
+        "openingDip": 16736.7,
+        "closingDip": 15816.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 518094063,
+      "posKobo": 658291050,
+      "transferKobo": 582073308
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-15",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 379365.9,
+            "closingMeter": 382757.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 712214.8,
+            "closingMeter": 715515.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 702221.3,
+            "closingMeter": 706618.5
+          }
+        ],
+        "openingDip": 17290.2,
+        "closingDip": 37686.1,
+        "receivedLitres": 31500,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 600603.6,
+            "closingMeter": 603410.3
+          }
+        ],
+        "openingDip": 12507.2,
+        "closingDip": 9699,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 293391.9,
+            "closingMeter": 294370.1
+          }
+        ],
+        "openingDip": 15816.1,
+        "closingDip": 14836,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 504855217,
+      "posKobo": 654631794,
+      "transferKobo": 338025602
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-16",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 382757.5,
+            "closingMeter": 386615.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 715515.2,
+            "closingMeter": 718121.1
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 706618.5,
+            "closingMeter": 708859.5
+          }
+        ],
+        "openingDip": 37686.1,
+        "closingDip": 28961.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 603410.3,
+            "closingMeter": 605650.4
+          }
+        ],
+        "openingDip": 9699,
+        "closingDip": 7455.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 294370.1,
+            "closingMeter": 295525
+          }
+        ],
+        "openingDip": 14836,
+        "closingDip": 13681.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 353332381,
+      "posKobo": 528416869,
+      "transferKobo": 346272046
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-17",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 386615.8,
+            "closingMeter": 389589.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 718121.1,
+            "closingMeter": 722035.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 708859.5,
+            "closingMeter": 712783.6
+          }
+        ],
+        "openingDip": 28961.2,
+        "closingDip": 18123.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 605650.4,
+            "closingMeter": 608368.5
+          }
+        ],
+        "openingDip": 7455.4,
+        "closingDip": 37730.7,
+        "receivedLitres": 32997.6,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 295525,
+            "closingMeter": 296325.5
+          }
+        ],
+        "openingDip": 13681.1,
+        "closingDip": 12879.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 402572192,
+      "posKobo": 522479033,
+      "transferKobo": 513769546
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-18",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 389589.7,
+            "closingMeter": 394647.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 722035.7,
+            "closingMeter": 725580
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 712783.6,
+            "closingMeter": 715898.2
+          }
+        ],
+        "openingDip": 18123.6,
+        "closingDip": 6399.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 608368.5,
+            "closingMeter": 611770.8
+          }
+        ],
+        "openingDip": 37730.7,
+        "closingDip": 34323.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 296325.5,
+            "closingMeter": 297702.6
+          }
+        ],
+        "openingDip": 12879.6,
+        "closingDip": 11498.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 505917402,
+      "posKobo": 637742577,
+      "transferKobo": 532701586
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-19",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 394647.4,
+            "closingMeter": 398757.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 725580,
+            "closingMeter": 729616.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 715898.2,
+            "closingMeter": 719852.1
+          }
+        ],
+        "openingDip": 6399.4,
+        "closingDip": 27287,
+        "receivedLitres": 32988.7,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 611770.8,
+            "closingMeter": 615633.1
+          }
+        ],
+        "openingDip": 34323.7,
+        "closingDip": 30463.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 297702.6,
+            "closingMeter": 298208.5
+          }
+        ],
+        "openingDip": 11498.7,
+        "closingDip": 10992.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 517684490,
+      "posKobo": 626280896,
+      "transferKobo": 511881477
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-20",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 398757.6,
+            "closingMeter": 402563.4
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 729616.2,
+            "closingMeter": 733302.3
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 719852.1,
+            "closingMeter": 721921.4
+          }
+        ],
+        "openingDip": 27287,
+        "closingDip": 17720.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 615633.1,
+            "closingMeter": 619606.8
+          }
+        ],
+        "openingDip": 30463.7,
+        "closingDip": 26488.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 298208.5,
+            "closingMeter": 299503.2
+          }
+        ],
+        "openingDip": 10992.6,
+        "closingDip": 9697,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 402014516,
+      "posKobo": 595184577,
+      "transferKobo": 531449616
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-21",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 402563.4,
+            "closingMeter": 404795.9
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 733302.3,
+            "closingMeter": 736448.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 721921.4,
+            "closingMeter": 726610.7
+          }
+        ],
+        "openingDip": 17720.2,
+        "closingDip": 40607,
+        "receivedLitres": 32969.5,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 619606.8,
+            "closingMeter": 622146.6
+          }
+        ],
+        "openingDip": 26488.4,
+        "closingDip": 23945.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 299503.2,
+            "closingMeter": 300150.3
+          }
+        ],
+        "openingDip": 9697,
+        "closingDip": 9049.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 342579803,
+      "posKobo": 477047131,
+      "transferKobo": 508819751
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-22",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 404795.9,
+            "closingMeter": 408045
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 736448.7,
+            "closingMeter": 740395.5
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 726610.7,
+            "closingMeter": 728942.6
+          }
+        ],
+        "openingDip": 40607,
+        "closingDip": 31066.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 622146.6,
+            "closingMeter": 624632.9
+          }
+        ],
+        "openingDip": 23945.8,
+        "closingDip": 21453.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 300150.3,
+            "closingMeter": 301278.9
+          }
+        ],
+        "openingDip": 9049.8,
+        "closingDip": 7919.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 390829309,
+      "posKobo": 589109229,
+      "transferKobo": 350904074
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-23",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 408045,
+            "closingMeter": 412069.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 740395.5,
+            "closingMeter": 745623.2
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 728942.6,
+            "closingMeter": 733433.9
+          }
+        ],
+        "openingDip": 31066.2,
+        "closingDip": 17292,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 624632.9,
+            "closingMeter": 627167
+          }
+        ],
+        "openingDip": 21453.6,
+        "closingDip": 18915.7,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 301278.9,
+            "closingMeter": 302776.6
+          }
+        ],
+        "openingDip": 7919.4,
+        "closingDip": 6420,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 465951203,
+      "posKobo": 636658017,
+      "transferKobo": 681846507
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-24",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 412069.7,
+            "closingMeter": 416818.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 745623.2,
+            "closingMeter": 750418.7
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 733433.9,
+            "closingMeter": 736960.3
+          }
+        ],
+        "openingDip": 17292,
+        "closingDip": 37215.8,
+        "receivedLitres": 32989,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 627167,
+            "closingMeter": 630776.6
+          }
+        ],
+        "openingDip": 18915.7,
+        "closingDip": 15306.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 302776.6,
+            "closingMeter": 303680
+          }
+        ],
+        "openingDip": 6420,
+        "closingDip": 5514.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 522567696,
+      "posKobo": 733356732,
+      "transferKobo": 512112812
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-25",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 416818.8,
+            "closingMeter": 420011.6
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 750418.7,
+            "closingMeter": 753481.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 736960.3,
+            "closingMeter": 740744.4
+          }
+        ],
+        "openingDip": 37215.8,
+        "closingDip": 27157.8,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 630776.6,
+            "closingMeter": 634334.7
+          }
+        ],
+        "openingDip": 15306.9,
+        "closingDip": 11747.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 303680,
+            "closingMeter": 304377.4
+          }
+        ],
+        "openingDip": 5514.9,
+        "closingDip": 4816.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 474470533,
+      "posKobo": 514567547,
+      "transferKobo": 461536128
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-26",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 420011.6,
+            "closingMeter": 424753.5
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 753481.4,
+            "closingMeter": 758270.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 740744.4,
+            "closingMeter": 743469.6
+          }
+        ],
+        "openingDip": 27157.8,
+        "closingDip": 14890,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 634334.7,
+            "closingMeter": 636377.3
+          }
+        ],
+        "openingDip": 11747.9,
+        "closingDip": 9703.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 304377.4,
+            "closingMeter": 305869.5
+          }
+        ],
+        "openingDip": 4816.2,
+        "closingDip": 3320.3,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 553915991,
+      "posKobo": 611293354,
+      "transferKobo": 421781768
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-27",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 424753.5,
+            "closingMeter": 429920.7
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 758270.4,
+            "closingMeter": 761015.9
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 743469.6,
+            "closingMeter": 746450.5
+          }
+        ],
+        "openingDip": 14890,
+        "closingDip": 36964.8,
+        "receivedLitres": 32973.7,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 636377.3,
+            "closingMeter": 641242.9
+          }
+        ],
+        "openingDip": 9703.6,
+        "closingDip": 4832.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 305869.5,
+            "closingMeter": 307141.8
+          }
+        ],
+        "openingDip": 3320.3,
+        "closingDip": 17040.9,
+        "receivedLitres": 14996.6,
+        "waybillLitres": 15000,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 526604194,
+      "posKobo": 758229570,
+      "transferKobo": 469638677
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-28",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 429920.7,
+            "closingMeter": 433840.1
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 761015.9,
+            "closingMeter": 765403.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 746450.5,
+            "closingMeter": 748894.5
+          }
+        ],
+        "openingDip": 36964.8,
+        "closingDip": 26212.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 641242.9,
+            "closingMeter": 645569.1
+          }
+        ],
+        "openingDip": 4832.4,
+        "closingDip": 33466.1,
+        "receivedLitres": 32970.3,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 307141.8,
+            "closingMeter": 307834.7
+          }
+        ],
+        "openingDip": 17040.9,
+        "closingDip": 16346.2,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 419253439,
+      "posKobo": 675485777,
+      "transferKobo": 509627367
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-29",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 433840.1,
+            "closingMeter": 437784.8
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 765403.4,
+            "closingMeter": 767685.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 748894.5,
+            "closingMeter": 752174.1
+          }
+        ],
+        "openingDip": 26212.4,
+        "closingDip": 16695.6,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 645569.1,
+            "closingMeter": 649708.5
+          }
+        ],
+        "openingDip": 33466.1,
+        "closingDip": 29321.4,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 307834.7,
+            "closingMeter": 309088.8
+          }
+        ],
+        "openingDip": 16346.2,
+        "closingDip": 15091,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 534925268,
+      "posKobo": 577467542,
+      "transferKobo": 423297595
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-30",
+    "products": [
+      {
+        "product": "PMS",
+        "pumps": [
+          {
+            "pumpId": "PMS-1",
+            "openingMeter": 437784.8,
+            "closingMeter": 441255.2
+          },
+          {
+            "pumpId": "PMS-2",
+            "openingMeter": 767685.4,
+            "closingMeter": 773071.4
+          },
+          {
+            "pumpId": "PMS-3",
+            "openingMeter": 752174.1,
+            "closingMeter": 756471.7
+          }
+        ],
+        "openingDip": 16695.6,
+        "closingDip": 36497.5,
+        "receivedLitres": 32972.4,
+        "waybillLitres": 33000,
+        "pricePerLitreKobo": 95000
+      },
+      {
+        "product": "AGO",
+        "pumps": [
+          {
+            "pumpId": "AGO-1",
+            "openingMeter": 649708.5,
+            "closingMeter": 653625.3
+          }
+        ],
+        "openingDip": 29321.4,
+        "closingDip": 25406.9,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 115000
+      },
+      {
+        "product": "DPK",
+        "pumps": [
+          {
+            "pumpId": "DPK-1",
+            "openingMeter": 309088.8,
+            "closingMeter": 310312.3
+          }
+        ],
+        "openingDip": 15091,
+        "closingDip": 13867.1,
+        "receivedLitres": 0,
+        "waybillLitres": 0,
+        "pricePerLitreKobo": 125000
+      }
+    ],
+    "payments": {
+      "cashKobo": 502284039,
+      "posKobo": 816304342,
+      "transferKobo": 534893543
+    }
+  }
+]

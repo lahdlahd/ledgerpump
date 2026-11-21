@@ -1,0 +1,32 @@
+[
+  {
+    "stationId": "NGT-LAG-01",
+    "name": "Northgate Fuel",
+    "city": "Lagos",
+    "pumps": {
+      "PMS": 4,
+      "AGO": 2,
+      "DPK": 1
+    }
+  },
+  {
+    "stationId": "RVS-BEN-01",
+    "name": "Riverside Fuel",
+    "city": "Benin",
+    "pumps": {
+      "PMS": 3,
+      "AGO": 2,
+      "DPK": 1
+    }
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "name": "Hilltop Fuel",
+    "city": "Akure",
+    "pumps": {
+      "PMS": 3,
+      "AGO": 1,
+      "DPK": 1
+    }
+  }
+]

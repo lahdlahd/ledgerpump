@@ -12,6 +12,7 @@ import { watch } from "../../src/watchtower.js";
 import { getClient, ROLLUP_ID } from "./client.js";
 import { exists, readBytes, readJson, secret, writeFile } from "./lib/files.js";
 import { allEntries, stationL2, treasury } from "./lib/l2.js";
+import { allBatches } from "./lib/batches.js";
 
 // Build the dashboard's data from the chain.
 //   dashboard/data/public.json  everything the public watchtower can see (safe to commit)
@@ -43,9 +44,13 @@ async function main(): Promise<void> {
   });
 
   // Batches, re-executed for canonical roots, and balances after each.
-  const batches = (await client.rest.listBatches(ROLLUP_ID)).sort((a, b) => a.batchIndex - b.batchIndex);
+  const batches = await allBatches(client);
   const ledger = new QledgerLedger();
   const batchRows = batches.map((b) => {
+    if (b.status === "rejected") {
+      return { index: b.batchIndex, status: b.status, inboxStart: b.inboxStart, inboxEnd: b.inboxEnd, submittedAt: b.submittedAt,
+        stateRoot: norm(b.stateRoot), withdrawalsRoot: norm(b.withdrawalsRoot ?? ""), canonical: false, withdrawals: [] as { index: number; recipient: string; qor: string }[] };
+    }
     const r = executeQledger(ctx, ledger, entries.slice(b.inboxStart, b.inboxEnd));
     return {
       index: b.batchIndex,

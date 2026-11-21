@@ -4,6 +4,7 @@ import { isBatchFinal, qledgerWithdrawalProof, uqorToQor, type BatchStatus } fro
 import { getClient, ROLLUP_ID } from "./client.js";
 import { connectOperator } from "./signer.js";
 import { exists, here, readJson, writeFile } from "./lib/files.js";
+import { allBatches } from "./lib/batches.js";
 
 // Execute every withdrawal from a finalised batch with its Merkle proof. The
 // chain recomputes the batch's withdrawals root from the proof before paying
@@ -19,7 +20,7 @@ async function main(): Promise<void> {
   const tx = await connectOperator(client);
   const claimed: Record<string, string> = exists("state/claims.json") ? readJson("state/claims.json") : {};
   const files = exists("state/batches") ? readdirSync(here("state/batches")).filter((f) => f.endsWith(".json")) : [];
-  const batches = await client.rest.listBatches(ROLLUP_ID);
+  const batches = await allBatches(client);
 
   for (const f of files) {
     const b = readJson<SavedBatch>(`state/batches/${f}`);

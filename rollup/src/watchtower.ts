@@ -12,6 +12,7 @@ import { watch } from "../../src/watchtower.js";
 import { getClient, ROLLUP_ID } from "./client.js";
 import { connectOperator, getSigner } from "./signer.js";
 import { exists, readBytes, readJson } from "./lib/files.js";
+import { allBatches } from "./lib/batches.js";
 
 // LedgerPump public watchtower. Holds no decryption keys.
 //
@@ -53,10 +54,14 @@ async function main(): Promise<void> {
   }
 
   // ── 2. Canonical batch check ──────────────────────────────────────────────
-  const batches = (await client.rest.listBatches(ROLLUP_ID)).sort((a, b) => a.batchIndex - b.batchIndex);
+  const batches = await allBatches(client);
   let ledger = new QledgerLedger();
   let fraud = 0;
   for (const b of batches) {
+    if (b.status === "rejected") {
+      console.log(`XX  batch ${b.batchIndex} [rejected] inbox ${b.inboxStart}→${b.inboxEnd}: state root ${b.stateRoot.slice(0, 16)}… was proven wrong on-chain (fraud upheld, submitter slashed, inbox rolled back)`);
+      continue;
+    }
     const parent = ledger.clone();
     const slice = entries.slice(b.inboxStart, b.inboxEnd);
     const honest = executeQledger(ctx, ledger, slice);
@@ -72,7 +77,7 @@ async function main(): Promise<void> {
         const tx = await connectOperator(client);
         const res = await tx.challengeBatch({ rollupId: ROLLUP_ID, batchIndex: b.batchIndex, proof });
         console.log(`    challenged: ${res.transactionHash} (code ${res.code})`);
-        const after = (await client.rest.listBatches(ROLLUP_ID)).find((x) => x.batchIndex === b.batchIndex);
+        const after = await client.rest.getBatch(ROLLUP_ID, b.batchIndex).catch(() => undefined);
         console.log(`    batch ${b.batchIndex} is now: ${after?.status ?? "unknown"}`);
         if (after?.status === "challenged") {
           const r2 = await tx.resolveChallenge({ rollupId: ROLLUP_ID, batchIndex: b.batchIndex, fraudUpheld: true });
@@ -83,7 +88,8 @@ async function main(): Promise<void> {
   }
 
   const alerts = findings.filter((f) => f.severity === "alert").length;
-  console.log(`\nSummary: ${findings.filter((f) => f.kind === "ok").length} reports verified, ${findings.filter((f) => f.kind === "discrepancy_reported").length} discrepancies (no payout), ${alerts} integrity alerts, ${fraud} non-canonical batches.`);
+  const rejected = batches.filter((b) => b.status === "rejected").length;
+  console.log(`\nSummary: ${findings.filter((f) => f.kind === "ok").length} reports verified, ${findings.filter((f) => f.kind === "discrepancy_reported").length} discrepancies (no payout), ${alerts} integrity alerts, ${fraud} non-canonical batches pending, ${rejected} forged batches rejected on-chain.`);
   process.exit(alerts || fraud ? 2 : 0);
 }
 

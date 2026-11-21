@@ -96,7 +96,9 @@ async function load(path) { try { const r = await fetch(path, { cache: "no-store
   const held = F.filter((f) => f.kind === "discrepancy_reported").length;
   const alerts = F.filter((f) => f.severity === "alert");
   const paidQor = Object.keys(pub.payouts).length;
-  const canonical = pub.batches.filter((b) => b.canonical).length;
+  const live = pub.batches.filter((b) => b.status !== "rejected");
+  const canonical = live.filter((b) => b.canonical).length;
+  const rejected = pub.batches.length - live.length;
 
   const byPost = new Map();
   for (const f of F) { if (!byPost.has(f.sequence)) byPost.set(f.sequence, []); byPost.get(f.sequence).push(f); }
@@ -108,7 +110,7 @@ async function load(path) { try { const r = await fetch(path, { cache: "no-store
     <div class="kpi"><div class="v" style="color:var(--warn)">${held}</div><div class="l">station-days held for discrepancy</div></div>
     <div class="kpi"><div class="v" style="color:var(--ok)">${paidQor}</div><div class="l">station-days paid out</div></div>
     <div class="kpi"><div class="v" style="color:${alerts.length ? "var(--bad)" : "var(--ok)"}">${alerts.length}</div><div class="l">integrity alerts</div></div>
-    <div class="kpi"><div class="v">${canonical}/${pub.batches.length}</div><div class="l">batches with canonical roots</div></div>
+    <div class="kpi"><div class="v">${canonical}/${live.length}</div><div class="l">batches canonical${rejected ? ` · <b style="color:var(--bad)">${rejected} forged rejected</b>` : ""}</div></div>
   </div>
 
   <div class="grid2">
@@ -136,9 +138,9 @@ async function load(path) { try { const r = await fetch(path, { cache: "no-store
       <h2>Settlement batches <span>re-executed independently</span></h2>
       <table><tr><th>Batch</th><th>Status</th><th>Inbox</th><th>Roots</th><th>State root</th><th>Withdrawals</th></tr>
       ${pub.batches.map((b) => `<tr><td class="mono">${b.index}</td>
-        <td>${b.status === "finalized" ? '<span class="chip ok">finalized</span>' : b.status === "submitted" ? '<span class="chip info">in challenge window</span>' : `<span class="chip bad">${esc(b.status)}</span>`}</td>
+        <td>${b.status === "finalized" ? '<span class="chip ok">finalized</span>' : b.status === "submitted" ? '<span class="chip info">in challenge window</span>' : b.status === "rejected" ? '<span class="chip bad">rejected · slashed</span>' : `<span class="chip bad">${esc(b.status)}</span>`}</td>
         <td class="mono">${b.inboxStart}→${b.inboxEnd}</td>
-        <td>${b.canonical ? '<span class="chip ok">canonical</span>' : '<span class="chip bad">WRONG</span>'}</td>
+        <td>${b.status === "rejected" ? '<span class="chip bad">forged — rejected</span>' : b.canonical ? '<span class="chip ok">canonical</span>' : '<span class="chip bad">WRONG</span>'}</td>
         <td class="mono muted">${short(b.stateRoot)}</td>
         <td>${b.withdrawals.length ? b.withdrawals.map((w) => `${w.qor} QOR ${pub.claims[w.index] ? '<span class="chip ok">claimed</span>' : '<span class="chip neutral">claimable after finality</span>'}`).join("<br>") : '<span class="muted">—</span>'}</td></tr>`).join("")}
       </table>

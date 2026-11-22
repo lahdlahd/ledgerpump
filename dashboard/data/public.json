@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T17:47:35.253Z",
+  "generatedAt": "2026-11-22T21:18:28.180Z",
   "chainId": "qorechain-diana",
   "rollup": {
     "id": "ledgerpump",
@@ -9,10 +9,10 @@
     "creator": "qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn"
   },
   "inbox": {
-    "head": 25,
-    "consumed": 25
+    "head": 27,
+    "consumed": 27
   },
-  "treasuryQor": "15",
+  "treasuryQor": "14",
   "stations": [
     {
       "stationId": "NGT-LAG-01",
@@ -40,9 +40,9 @@
       "city": "Akure",
       "keyFingerprint": "cea7d9535d2a0b0f8358a1cade24d245a5e39876a5c7496891a81614ee57759e",
       "anchored": true,
-      "reports": 2,
-      "paidDays": 1,
-      "l2BalanceQor": "1"
+      "reports": 3,
+      "paidDays": 2,
+      "l2BalanceQor": "2"
     }
   ],
   "findings": [
@@ -160,6 +160,14 @@
       "kind": "discrepancy_reported",
       "severity": "warn",
       "detail": "station-day does not qualify for payout"
+    },
+    {
+      "sequence": 26,
+      "stationId": "HLT-AKR-01",
+      "date": "2026-11-02",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
     }
   ],
   "entries": [
@@ -325,6 +333,21 @@
     {
       "seq": 25,
       "kind": "ledger_tx"
+    },
+    {
+      "seq": 26,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "d90fa0386762614d2de891f1d4b3a8a966938d2982b9fceadf13f74ef7d1edae",
+        "date": "2026-11-02",
+        "stationId": "HLT-AKR-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 27,
+      "kind": "ledger_tx"
     }
   ],
   "batches": [
@@ -366,6 +389,17 @@
       "withdrawalsRoot": "",
       "canonical": true,
       "withdrawals": []
+    },
+    {
+      "index": 3,
+      "status": "finalized",
+      "inboxStart": 25,
+      "inboxEnd": 27,
+      "submittedAt": 10573318,
+      "stateRoot": "0ee9c485f3cd8d01f6a9de6e86a4c5999658d3d70ee1d5a0e1813d1db0b7e2a2",
+      "withdrawalsRoot": "",
+      "canonical": true,
+      "withdrawals": []
     }
   ],
   "payouts": {
@@ -373,7 +407,8 @@
     "NGT-LAG-01|2026-11-02": "57035335A37BC2BE20CC6DEED38CEB67B5A75547F9907933D441A16CE230904B",
     "NGT-LAG-01|2026-11-03": "ABA92ADF5BDD6E7447F4D897C66D65598FC3883C7E45A3AA79BC4B476CBB4F7D",
     "RVS-BEN-01|2026-11-01": "A81B07A065BBBFEC2AC9594B31ACE601CECD3A6A6CF60C9589B796717FAA06A2",
-    "HLT-AKR-01|2026-11-01": "851AE3AA21393E1D6207E7FCDEB7EDBF22EC04295AE3841292BC525FE5CB675E"
+    "HLT-AKR-01|2026-11-01": "851AE3AA21393E1D6207E7FCDEB7EDBF22EC04295AE3841292BC525FE5CB675E",
+    "HLT-AKR-01|2026-11-02": "241F3C991FDD0C671A2354D4A8287DA1AF82EFCF9C77264F499DCBCBABE7E3F6"
   },
   "claims": {
     "0": "CA9CE5776BAF105EFBBD4D6C0B6588BFEC4623A3A9ABB13780CB84842FB05195"
@@ -395,6 +430,12 @@
       "valid": true,
       "anchoredAt": 1795358282,
       "mainChainHeight": 10559160,
+      "signBytesVersion": "v2"
+    },
+    "3": {
+      "valid": true,
+      "anchoredAt": 1795378512,
+      "mainChainHeight": 10573318,
       "signBytesVersion": "v2"
     }
   },

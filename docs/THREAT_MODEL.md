@@ -31,7 +31,7 @@ LedgerPump settles fuel-station reconciliation on a QoreChain rollup. This docum
 | T8 | Payout for a station-day that didn't reconcile | The treasury signs transfers only for watchtower-verified, non-discrepancy, first submissions; anyone can audit every transfer against the inbox leaves | ⚠️ enforced off-chain and auditable, **not** by the chain (the chain checks ledger correctness, not our business rule) |
 | T9 | Station lies about its own status | The auditor tier decrypts the report and re-runs reconciliation; a mismatch is evidence the signed leaf was false | ✅ engine tested; auditor tooling: `read-report` |
 | T10 | Duplicate / replayed submissions | Flagged by the watchtower from `(station, date)`; payouts skip duplicates; signatures are bound to chain and rollup | ✅ on testnet (inbox #10) |
-| T12 | Someone presents a fake "this batch settled" claim | Settlement receipts are verified by re-reading the layer, batch root, anchor and creator key from the chain, and checking the creator's ML-DSA-87 anchor signature; a receipt file alone is never trusted | ✅ receipts for batches 0–1 verified on testnet |
+| T12 | Someone presents a fake "this batch settled" claim | Settlement receipts are verified by re-reading the layer, batch root, anchor and creator key from the chain, and checking the creator's ML-DSA-87 anchor signature; a receipt file alone is never trusted | ✅ receipts for batches 0–2 verified on testnet |
 | T11 | Withdrawal paid twice or to the wrong address | The chain checks the Merkle proof against the finalised batch's withdrawals root and tracks withdrawal indices | ✅ by chain design; first claim executed on testnet |
 
 ## What is public

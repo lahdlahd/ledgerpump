@@ -4,6 +4,8 @@
 
 **Trust every transaction. Reconcile every litre.**
 
+**Live dashboard:** https://lahdlahd.github.io/ledgerpump/ (public watchtower view, refreshed from QoreChain testnet)
+
 LedgerPump is a post-quantum reconciliation and settlement rollup for fuel distribution businesses, built on [QoreChain](https://qorechain.io) for the [Build Before Q-Day](https://build.qorechain.io) Developer Fest (Protocol Builders track).
 
 Fuel station owners lose money in the gap between what the pumps sold, what the tanks hold and what was actually collected. LedgerPump closes that gap:

@@ -1,0 +1,39 @@
+name: Publish dashboard
+
+# Publishes the public dashboard (dashboard/index.html + data/public.json) to
+# GitHub Pages on every push that changes it. The owner view (data/owner.json)
+# is git-ignored and never published.
+on:
+  push:
+    branches: [main]
+    paths: ["dashboard/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site (public data only)
+        run: |
+          mkdir -p _site/data
+          cp dashboard/index.html _site/
+          cp dashboard/data/public.json _site/data/
+          test ! -e _site/data/owner.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

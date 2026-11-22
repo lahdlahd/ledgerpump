@@ -2,6 +2,8 @@ import "dotenv/config";
 import {
   bytesToHex,
   executeQledger,
+  verifySettlementReceipt,
+  type SettlementReceipt,
   hexToBytes,
   QledgerLedger,
   uqorToQor,
@@ -76,6 +78,16 @@ async function main(): Promise<void> {
     return { seq, kind: "ledger_tx" };
   });
 
+  // Settlement receipts (rollup/receipts/), re-verified against live chain state.
+  const receipts: Record<number, { valid: boolean; anchoredAt: number; mainChainHeight: number; signBytesVersion?: string }> = {};
+  for (const b of batchRows) {
+    const p = `receipts/batch-${b.index}.json`;
+    if (!exists(p)) continue;
+    const r = readJson<SettlementReceipt>(p);
+    const v = await verifySettlementReceipt(r, { client }).catch(() => undefined);
+    if (v) receipts[b.index] = { valid: v.valid, anchoredAt: r.anchoredAt, mainChainHeight: r.mainChainHeight, signBytesVersion: v.signBytesVersion };
+  }
+
   const payouts: Record<string, string> = exists("state/payouts.json") ? readJson("state/payouts.json") : {};
   const claims: Record<string, string> = exists("state/claims.json") ? readJson("state/claims.json") : {};
 
@@ -102,6 +114,7 @@ async function main(): Promise<void> {
     batches: batchRows,
     payouts,
     claims,
+    receipts,
   };
   writeFile("../dashboard/data/public.json", JSON.stringify(pub, null, 2));
   console.log(`Public snapshot: ${findings.length} findings, ${batchRows.length} batches → dashboard/data/public.json`);

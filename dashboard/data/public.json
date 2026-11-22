@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T20:56:14.510Z",
+  "generatedAt": "2026-11-22T17:47:35.253Z",
   "chainId": "qorechain-diana",
   "rollup": {
     "id": "ledgerpump",
@@ -9,10 +9,10 @@
     "creator": "qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn"
   },
   "inbox": {
-    "head": 19,
-    "consumed": 18
+    "head": 25,
+    "consumed": 25
   },
-  "treasuryQor": "17",
+  "treasuryQor": "15",
   "stations": [
     {
       "stationId": "NGT-LAG-01",
@@ -30,9 +30,9 @@
       "city": "Benin",
       "keyFingerprint": "6dd540c6b02d02c2dbf500d4f17ce787e2596853b3cdaf1132ca65bdbeb95cc9",
       "anchored": true,
-      "reports": 0,
-      "paidDays": 0,
-      "l2BalanceQor": "0"
+      "reports": 2,
+      "paidDays": 1,
+      "l2BalanceQor": "1"
     },
     {
       "stationId": "HLT-AKR-01",
@@ -40,9 +40,9 @@
       "city": "Akure",
       "keyFingerprint": "cea7d9535d2a0b0f8358a1cade24d245a5e39876a5c7496891a81614ee57759e",
       "anchored": true,
-      "reports": 0,
-      "paidDays": 0,
-      "l2BalanceQor": "0"
+      "reports": 2,
+      "paidDays": 1,
+      "l2BalanceQor": "1"
     }
   ],
   "findings": [
@@ -128,6 +128,38 @@
       "kind": "ok",
       "severity": "info",
       "detail": "within_tolerance"
+    },
+    {
+      "sequence": 20,
+      "stationId": "RVS-BEN-01",
+      "date": "2026-11-01",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
+    },
+    {
+      "sequence": 21,
+      "stationId": "RVS-BEN-01",
+      "date": "2026-11-12",
+      "kind": "discrepancy_reported",
+      "severity": "warn",
+      "detail": "station-day does not qualify for payout"
+    },
+    {
+      "sequence": 22,
+      "stationId": "HLT-AKR-01",
+      "date": "2026-11-01",
+      "kind": "ok",
+      "severity": "info",
+      "detail": "within_tolerance"
+    },
+    {
+      "sequence": 23,
+      "stationId": "HLT-AKR-01",
+      "date": "2026-11-15",
+      "kind": "discrepancy_reported",
+      "severity": "warn",
+      "detail": "station-day does not qualify for payout"
     }
   ],
   "entries": [
@@ -241,6 +273,58 @@
     {
       "seq": 19,
       "kind": "ledger_tx"
+    },
+    {
+      "seq": 20,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "a420c14aa7298a830d19f3e3169b3c702185f153f7a497cef3f281001b9f2575",
+        "date": "2026-11-01",
+        "stationId": "RVS-BEN-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 21,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "f0b7067d3c7061f40e0f74a474108ae1f585ab4f9b5bb58d54661e325746827b",
+        "date": "2026-11-12",
+        "stationId": "RVS-BEN-01",
+        "status": "discrepancy",
+        "v": 2
+      }
+    },
+    {
+      "seq": 22,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "67dd55771f0b74dfd526e7f1a9afff77ca506192ca3c42da9fb114f7d133c2b5",
+        "date": "2026-11-01",
+        "stationId": "HLT-AKR-01",
+        "status": "within_tolerance",
+        "v": 2
+      }
+    },
+    {
+      "seq": 23,
+      "kind": "report",
+      "leaf": {
+        "ciphertextHash": "9a08034c00bdd55a8e111cff517ea2b14a2a6e1218a29a7eb1dc247b5a891a20",
+        "date": "2026-11-15",
+        "stationId": "HLT-AKR-01",
+        "status": "discrepancy",
+        "v": 2
+      }
+    },
+    {
+      "seq": 24,
+      "kind": "ledger_tx"
+    },
+    {
+      "seq": 25,
+      "kind": "ledger_tx"
     }
   ],
   "batches": [
@@ -274,22 +358,59 @@
     },
     {
       "index": 2,
-      "status": "rejected",
+      "status": "finalized",
       "inboxStart": 18,
-      "inboxEnd": 19,
-      "submittedAt": 10514310,
-      "stateRoot": "e5f8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+      "inboxEnd": 25,
+      "submittedAt": 10559160,
+      "stateRoot": "b7713dc1d04c62c09a85139e92af341bfb6aaa49834f0db35c2063623de6a4ec",
       "withdrawalsRoot": "",
-      "canonical": false,
+      "canonical": true,
       "withdrawals": []
     }
   ],
   "payouts": {
     "NGT-LAG-01|2026-11-01": "1792A90F7C43E7683AC98753F86025F2121D2B0A5F22E35E448316B12E0F5056",
     "NGT-LAG-01|2026-11-02": "57035335A37BC2BE20CC6DEED38CEB67B5A75547F9907933D441A16CE230904B",
-    "NGT-LAG-01|2026-11-03": "ABA92ADF5BDD6E7447F4D897C66D65598FC3883C7E45A3AA79BC4B476CBB4F7D"
+    "NGT-LAG-01|2026-11-03": "ABA92ADF5BDD6E7447F4D897C66D65598FC3883C7E45A3AA79BC4B476CBB4F7D",
+    "RVS-BEN-01|2026-11-01": "A81B07A065BBBFEC2AC9594B31ACE601CECD3A6A6CF60C9589B796717FAA06A2",
+    "HLT-AKR-01|2026-11-01": "851AE3AA21393E1D6207E7FCDEB7EDBF22EC04295AE3841292BC525FE5CB675E"
   },
   "claims": {
     "0": "CA9CE5776BAF105EFBBD4D6C0B6588BFEC4623A3A9ABB13780CB84842FB05195"
-  }
+  },
+  "receipts": {
+    "0": {
+      "valid": true,
+      "anchoredAt": 1795287877,
+      "mainChainHeight": 10509861,
+      "signBytesVersion": "v2"
+    },
+    "1": {
+      "valid": true,
+      "anchoredAt": 1795289975,
+      "mainChainHeight": 10511332,
+      "signBytesVersion": "v2"
+    },
+    "2": {
+      "valid": true,
+      "anchoredAt": 1795358282,
+      "mainChainHeight": 10559160,
+      "signBytesVersion": "v2"
+    }
+  },
+  "rejected": [
+    {
+      "batchIndex": 2,
+      "inboxStart": 18,
+      "inboxEnd": 19,
+      "forgedStateRoot": "e5f8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+      "honestStateRoot": "1af8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+      "submitter": "qor1xxht8ehjclx8lzznxzfxwpwngm3cx3e3d0tfr5",
+      "submitTx": "9DF2AFEB1A24EBBCE80B3CF7DA164DFB712C4CC2B35E0AB56117EB57CB193B62",
+      "challenger": "qor1ua2dl0nuf3qxr5yfhr3x9ah5cdh9vw7qczvdj5",
+      "challengeTx": "C93AB320110D41FFB5FC448195B05A5CD4803223FD0CB3C8224E4B7B3BFFA660",
+      "slashedQor": "1000",
+      "note": "Fraud demo. Rejected 12 s after submission by an independent challenger; the chain then reused index 2 for the next honest batch."
+    }
+  ]
 }

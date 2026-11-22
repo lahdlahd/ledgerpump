@@ -30,3 +30,5 @@ Operator account: `qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn`
 
 
 **Note (22 Nov):** the independent challenger `qor1ua2dl0nuf3qxr5yfhr3x9ah5cdh9vw7qczvdj5` that proved our forged batch 2 wrong was watcher **W1 of [Wicketgate](https://build.qorechain.io/p/wicketgate)**, another fest team. Wicketgate's project timeline records it as a staged LedgerPump demo that W1 challenged. We credit them: it's a live example of independent watchers securing someone else's rollup on QoreChain.
+
+**EVM precompile probe (22 Nov, `npm run evm-probe`, read-only `eth_call` on chain id 0x2648 = 9800):** `ecAdd` and `ecMul` on BN254 both return the correct 2·G1. `ecPairing` returns 1 for a valid pairing equation and 0 for an invalid one, with an estimated cost of 139,016 gas for 2 pairs. Standard EIP-196/197 behaviour, so Groth16 proofs can be verified on QoreChain testnet's EVM. `pqcVerify` (0x…0a01) is present and expects an ABI selector.

@@ -25,7 +25,8 @@
     "snapshot": "tsx src/snapshot.ts",
     "bad-batch": "tsx src/bad-batch.ts",
     "receipt": "tsx src/receipt.ts",
-    "audit": "tsx src/audit.ts"
+    "audit": "tsx src/audit.ts",
+    "evm-probe": "tsx src/evm-probe.ts"
   },
   "dependencies": {
     "@cosmjs/proto-signing": "^0.39.0",

@@ -35,6 +35,13 @@ async function main(): Promise<void> {
   const kem = await client.rest.getKemKey(tx.address).catch(() => undefined);
   if (!kem) throw new Error("Owner has no ML-KEM-1024 key on chain. Run: npm run keys && npm run register-kem");
   const readers = [{ member: tx.address, encapsulationKey: hexToBytes(kem.publicKey) }];
+  // The auditor, if configured: a separate account whose key is also read from the chain.
+  const auditor = process.env.LP_AUDITOR_ADDRESS;
+  if (auditor) {
+    const akem = await client.rest.getKemKey(auditor).catch(() => undefined);
+    if (!akem) throw new Error(`Auditor ${auditor} has no ML-KEM-1024 key on chain. Run: npm run register-kem -- auditor`);
+    readers.push({ member: auditor, encapsulationKey: hexToBytes(akem.publicKey) });
+  }
 
   // One submission per station-day unless --resubmit (a resubmission is kept, never overwritten,
   // and the watchtower shows it as a duplicate).
@@ -62,6 +69,7 @@ async function main(): Promise<void> {
   const res = await tx.postRollupData({ rollupId: ROLLUP_ID, data: post });
   const inbox = await client.rest.getInbox(ROLLUP_ID);
   console.log(`${report.stationId} ${report.date}: ${result.status}`);
+  console.log(`  readers: ${readers.map((r) => r.member).join(", ")}`);
   console.log(`  ciphertext: ${envelope.length} bytes → rollup/${storePath}`);
   console.log(`  ciphertext SHA-256: ${leaf.ciphertextHash}`);
   console.log(`  post: ${post.length} bytes (leaf + ML-DSA-87 signature), SHA-256 ${sha256Hex(post)}`);

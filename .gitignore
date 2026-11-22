@@ -5,3 +5,6 @@ keys/
 dashboard/data/owner.json
 .env.*
 !.env.example
+zk/build/*.ptau
+zk/build/rec_0.zkey
+zk/build/reconcile.sym

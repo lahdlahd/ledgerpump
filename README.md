@@ -1,5 +1,7 @@
 # LedgerPump
 
+[![CI](https://github.com/lahdlahd/ledgerpump/actions/workflows/ci.yml/badge.svg)](https://github.com/lahdlahd/ledgerpump/actions/workflows/ci.yml)
+
 **Trust every transaction. Reconcile every litre.**
 
 LedgerPump is a post-quantum reconciliation and settlement rollup for fuel distribution businesses, built on [QoreChain](https://qorechain.io) for the [Build Before Q-Day](https://build.qorechain.io) Developer Fest (Protocol Builders track).

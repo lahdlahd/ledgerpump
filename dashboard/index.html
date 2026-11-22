@@ -98,7 +98,8 @@ async function load(path) { try { const r = await fetch(path, { cache: "no-store
   const paidQor = Object.keys(pub.payouts).length;
   const live = pub.batches.filter((b) => b.status !== "rejected");
   const canonical = live.filter((b) => b.canonical).length;
-  const rejected = pub.batches.length - live.length;
+  const rejectedList = (pub.rejected ?? []);
+  const rejected = rejectedList.length || pub.batches.length - live.length;
 
   const byPost = new Map();
   for (const f of F) { if (!byPost.has(f.sequence)) byPost.set(f.sequence, []); byPost.get(f.sequence).push(f); }
@@ -137,12 +138,16 @@ async function load(path) { try { const r = await fetch(path, { cache: "no-store
     <section>
       <h2>Settlement batches <span>re-executed independently</span></h2>
       <table><tr><th>Batch</th><th>Status</th><th>Inbox</th><th>Roots</th><th>Settlement receipt</th><th>Withdrawals</th></tr>
-      ${pub.batches.map((b) => `<tr><td class="mono">${b.index}</td>
+      ${pub.batches.filter((b) => !(b.status === "rejected" && rejectedList.length)).map((b) => `<tr><td class="mono">${b.index}</td>
         <td>${b.status === "finalized" ? '<span class="chip ok">finalized</span>' : b.status === "submitted" ? '<span class="chip info">in challenge window</span>' : b.status === "rejected" ? '<span class="chip bad">rejected · slashed</span>' : `<span class="chip bad">${esc(b.status)}</span>`}</td>
         <td class="mono">${b.inboxStart}→${b.inboxEnd}</td>
         <td>${b.status === "rejected" ? '<span class="chip bad">forged — rejected</span>' : b.canonical ? '<span class="chip ok">canonical</span>' : '<span class="chip bad">WRONG</span>'}</td>
         <td>${(pub.receipts ?? {})[b.index] ? ((pub.receipts[b.index].valid ? '<span class="chip ok">ML-DSA-87 anchor verified</span>' : '<span class="chip bad">receipt invalid</span>') + `<div class="mono muted">${short(b.stateRoot)}</div>`) : `<span class="mono muted">${short(b.stateRoot)}</span>`}</td>
         <td>${b.withdrawals.length ? b.withdrawals.map((w) => `${w.qor} QOR ${pub.claims[w.index] ? '<span class="chip ok">claimed</span>' : '<span class="chip neutral">claimable after finality</span>'}`).join("<br>") : '<span class="muted">—</span>'}</td></tr>`).join("")}
+      ${rejectedList.map((r) => `<tr><td class="mono">${r.batchIndex} <span class="muted">(forged)</span></td><td><span class="chip bad">rejected · slashed</span></td>
+        <td class="mono">${r.inboxStart}→${r.inboxEnd}</td><td><span class="chip bad">forged root</span></td>
+        <td class="mono muted">${short(r.forgedStateRoot)}<div>challenge ${short(r.challengeTx, 6)}</div></td>
+        <td class="muted">${esc(r.slashedQor)} QOR bond slashed</td></tr>`).join("")}
       </table>
     </section>
 

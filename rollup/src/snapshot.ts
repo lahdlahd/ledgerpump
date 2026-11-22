@@ -115,6 +115,8 @@ async function main(): Promise<void> {
     payouts,
     claims,
     receipts,
+    // The chain reuses a rejected batch's index, so forged batches are kept on record here.
+    rejected: exists("state/rejected-batches.json") ? readJson("state/rejected-batches.json") : [],
   };
   writeFile("../dashboard/data/public.json", JSON.stringify(pub, null, 2));
   console.log(`Public snapshot: ${findings.length} findings, ${batchRows.length} batches → dashboard/data/public.json`);

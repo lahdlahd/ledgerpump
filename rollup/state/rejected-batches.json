@@ -1,0 +1,15 @@
+[
+  {
+    "batchIndex": 2,
+    "inboxStart": 18,
+    "inboxEnd": 19,
+    "forgedStateRoot": "e5f8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+    "honestStateRoot": "1af8cca29bdeeb240e32853a19150135fbc0a32ec27019db672eed874766ce00",
+    "submitter": "qor1xxht8ehjclx8lzznxzfxwpwngm3cx3e3d0tfr5",
+    "submitTx": "9DF2AFEB1A24EBBCE80B3CF7DA164DFB712C4CC2B35E0AB56117EB57CB193B62",
+    "challenger": "qor1ua2dl0nuf3qxr5yfhr3x9ah5cdh9vw7qczvdj5",
+    "challengeTx": "C93AB320110D41FFB5FC448195B05A5CD4803223FD0CB3C8224E4B7B3BFFA660",
+    "slashedQor": "1000",
+    "note": "Fraud demo. Rejected 12 s after submission by an independent challenger; the chain then reused index 2 for the next honest batch."
+  }
+]

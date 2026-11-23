@@ -11,7 +11,9 @@
     "compile": "hardhat compile",
     "deploy": "tsx scripts/deploy.mts",
     "claim": "tsx scripts/claim.mts",
-    "pqc-probe": "tsx scripts/pqc-probe.mts"
+    "pqc-probe": "tsx scripts/pqc-probe.mts",
+    "deploy-v2": "tsx scripts/deploy-v2.mts",
+    "claim-v2": "tsx scripts/claim-v2.mts"
   },
   "keywords": [],
   "author": "",

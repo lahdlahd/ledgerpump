@@ -24,3 +24,21 @@ npm run claim -- NGT-LAG-01 2026-11-01            # reconciled → PAID
 npm run claim -- NGT-LAG-01 2026-11-08 --record   # theft day → REFUSED on-chain
 ```
 QoreChain EVM transactions need an ML-DSA-87 key and an open EVM authorisation window on the sending account. `deploy` handles both. The EVM identity is the coin-60 account from the same recovery phrase as the operator, so no new secret is created.
+
+## PayoutGateV2: ZK proof + post-quantum station signature
+
+`contracts/PayoutGateV2.sol` pays a station-day only when **both** checks pass on-chain:
+
+1. the Groth16 proof says the day reconciled (same `ReconcileVerifier` as v1), and
+2. the station's own **ML-DSA-87** key signed this exact claim. QoreChain's `pqcVerify` precompile (`0x…0A01`) checks the signature.
+
+The station key must hash (SHA-256) to the fingerprint registered for that station. It's the same key that signs the station's rollup leaves, and its fingerprint is anchored in the rollup inbox (`LPS1`). The signed message (`claimMessage`) binds the chain id, the contract, the station-day, the payee and the proof's commitment. So a signature can't be replayed on another day, another contract or another chain.
+
+```
+npm run pqc-probe                                   # read-only: pqcVerify accepts ML-DSA-87, rejects forgeries
+npm run compile && npm run deploy-v2                # reuses the v1 verifier and payees
+npm run claim-v2 -- NGT-LAG-01 2026-11-02           # reconciled + signed → PAID
+npm run claim-v2 -- NGT-LAG-01 2026-11-03 --forge-sig   # one signature byte flipped → BadStationSignature on-chain
+```
+
+Local tests use `contracts/test/MockPqcVerify.sol` in place of the precompile (Hardhat doesn't have it). The tests sign with real ML-DSA-87 keys and register only signatures that `@noble/post-quantum` verifies. The real check runs on testnet.

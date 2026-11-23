@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "tsx scripts/deploy.mts",
+    "claim": "tsx scripts/claim.mts"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,7 @@
     "chai": "^4.5.0",
     "hardhat": "^2.22.17",
     "solc": "^0.8.24",
+    "tsx": "^4.23.15",
     "typescript": "^5.6.3",
     "viem": "^2.21.55"
   },

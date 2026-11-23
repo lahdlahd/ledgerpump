@@ -1,0 +1,30 @@
+{
+  "name": "ledgerpump-evm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-viem": "^2.0.6",
+    "chai": "^4.5.0",
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.24",
+    "typescript": "^5.6.3",
+    "viem": "^2.21.55"
+  },
+  "dependencies": {
+    "@cosmjs/stargate": "^0.39.0",
+    "@qorechain/evm": "^0.14.0",
+    "@qorechain/sdk": "^0.14.0",
+    "dotenv": "^18.0.10"
+  }
+}

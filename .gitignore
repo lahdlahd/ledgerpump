@@ -8,3 +8,5 @@ dashboard/data/owner.json
 zk/build/*.ptau
 zk/build/rec_0.zkey
 zk/build/reconcile.sym
+evm/artifacts/
+evm/cache/

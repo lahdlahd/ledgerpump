@@ -33,3 +33,21 @@ Operator account: `qor1n93a8mz6vdjhre7f8ehs2fdugxvqjpcu77k8zn`
 | 2026-11-22 20:15 | Batch 3: consumed inbox 25→27 (Hilltop Nov 2 report + its 1 QOR payout). Finalised, and its **settlement receipt is VALID** (all six checks). Receipts for batches 0–3 are all valid | `538077F080DDDE8313E7AFE6DF0A0DD83550DC50EFA23D594B8B2DAC2F05960B` | 10573318 | ✅ |
 
 **EVM precompile probe (22 Nov, `npm run evm-probe`, read-only `eth_call` on chain id 0x2648 = 9800):** `ecAdd` and `ecMul` on BN254 both return the correct 2·G1. `ecPairing` returns 1 for a valid pairing equation and 0 for an invalid one, with an estimated cost of 139,016 gas for 2 pairs. Standard EIP-196/197 behaviour, so Groth16 proofs can be verified on QoreChain testnet's EVM. `pqcVerify` (0x…0a01) is present and expects an ABI selector.
+
+## ZK-gated settlement on QoreChain's EVM (23 Nov)
+
+A station proves its day reconciled with a Groth16 proof (BN254, circuit `zk/circuits/reconcile.circom`). The `PayoutGate` contract verifies the proof on-chain and pays only if the public signal `reconciled` is 1. The chain sees a Poseidon commitment to the figures, never the figures. Records: `evm/deployment.json`, `evm/claims.json`.
+
+Deployer: `0x5864884ab6449F77d926F3787218Cb516652b30A` (`qor1tpjgsj4kgj0h0kfx7du8yxxt29n99vc24dzyta`), a unified coin-60 account with a registered ML-DSA-87 key, using an EVM authorisation window.
+
+| Date (UTC) | Step | Tx hash | Block | Result |
+|---|---|---|---|---|
+| 2026-11-23 10:02 | `ReconcileVerifier` deployed at `0x7dcec2d913ff7fb2e16f730b3e724c0ff82db079` | `0x76fdde9017d86716f1d40e678be4910d127576dbbe1923baa60d7bc0a3dfbcc1` | — | ✅ |
+| 2026-11-23 10:02 | `PayoutGate` deployed at `0xd637d36562242e4be73e6e3b14a6fe7619b7a183`, funded with 1 QOR, 0.1 QOR per reconciled day | `0x90100d751d1e8bed5f9e6beaf6d249340ad5ac77f38d38a5f20118be5575aa64` | — | ✅ |
+| 2026-11-23 10:02 | Payees registered: NGT-LAG-01 → `0x4620…0078` | `0x9606fa6c69fe17945f315868cd2be98096809c0faeea298c0136afa293c9ad22` | — | ✅ |
+| 2026-11-23 10:02 | RVS-BEN-01 → `0x661D…1e44` | `0xda66efbc0efd69798411c1198f242052371f9505063d86a6c12b5ae47d55ca26` | — | ✅ |
+| 2026-11-23 10:02 | HLT-AKR-01 → `0xcC3a…6E17` | `0x41fb796f4e630adcacae8f7592a6e42aa3e4e3897fdefa04e62ad965667ab24c` | — | ✅ |
+| 2026-11-23 10:03 | **Claim PAID:** NGT-LAG-01 2026-11-01 (`reconciled = 1`). Proof verified on-chain, 0.1 QOR sent to the station's payee | `0x42d69851a8f3fd835a4d9408596038da30d8213a0beb7b297d80cf3cb67374f5` | 10608125 | ✅ gas 326,297 |
+| 2026-11-23 10:09 | **Claim REFUSED on-chain:** NGT-LAG-01 2026-11-08, the 600 L theft day. The proof is valid but proves `reconciled = 0`, so the contract reverts with `NotReconciled`. No payout | `0xac57ca44abccc1ad8d63cd8616398fccdf85eb6a9cc55ee0c61db2969985fb8a` | 10608396 | ✅ reverted as designed (gas 300,000) |
+
+This closes the gap in threat T8: for claims through `PayoutGate`, "pay only reconciled days" is enforced by the chain, not by the operator's goodwill.

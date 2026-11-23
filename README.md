@@ -31,6 +31,7 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Watchtower tier 1 (public, no keys): anchors, ML-DSA-87 signatures, ciphertext commitments, duplicates, canonical batch re-execution, `--challenge` fraud proofs | `src/watchtower.ts`, `rollup/src/watchtower.ts` | ✅ tested + run on testnet (caught a real overwritten ciphertext) |
 | Payouts: deposit → treasury pays reconciled station-days (qledger ML-DSA-44 transfers) → station withdrawal → execute with Merkle proof after finalisation | `rollup/src/{deposit,pay,withdraw,claim}.ts` | ✅ full loop on testnet (claim tx in the testnet log) |
 | Settlement receipts: ML-DSA-87-signed batch anchors, verified against live chain state | `rollup/src/receipt.ts`, `rollup/receipts/` | ✅ verified on testnet |
+| ZK reconciliation proof (Groth16, ~10.5k constraints) + `PayoutGate` on QoreChain EVM: the chain verifies a station reconciled without seeing its books, and pays only reconciled days | `zk/`, `evm/` | ✅ on testnet: reconciled day PAID, theft day REFUSED on-chain (`NotReconciled`) |
 | Dashboard: public watchtower view (timeline, alerts, batches, stations) + owner view decrypted locally | `dashboard/`, `rollup/src/snapshot.ts` | ✅ |
 
 ## Quick start

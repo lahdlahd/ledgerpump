@@ -17,7 +17,8 @@ LedgerPump is built with an AI-native workflow. This file is kept up to date as 
 
    The humans reviewed and approved each decision, including the rule that the project uses only synthetic data and stands independent of any company.
 3. **Implementation.** Claude wrote the code. The humans review it, run it and decide what ships.
-4. **Verification.** Every on-chain claim must be backed by a real testnet transaction hash before it appears in the README or video.
+4. **Verification.** Every on-chain claim must be backed by a real testnet transaction hash before it appears in the README or video. Refusals count too: every "the chain refuses X" claim has its own reverted transaction.
+5. **Review and iteration.** After each milestone, Joel asked Claude for a candid rating against the judging criteria and the other entries. Those reviews drove the next steps: the ZK proof (to make payouts chain-enforced), the post-quantum signature check (to make the station authorise its own payout), and leaf v3 (to join the rollup and the payout into one chain of evidence). Each step was proven on testnet before the next one started.
 
 ## Generated work
 
@@ -28,6 +29,11 @@ LedgerPump is built with an AI-native workflow. This file is kept up to date as 
 | Post-quantum crypto | `src/crypto.ts` | Claude | Approved the design (ML-DSA-87 leaves, ML-KEM-1024 + AES-256-GCM envelopes, ciphertext-hash commitments) |
 | Watchtower | `src/watchtower.ts`, `rollup/src/watchtower.ts` | Claude | Asked for confidentiality-preserving verification; reviewed |
 | Rollup operator scripts | `rollup/src/*.ts` (create from the RDK template; bond, post-report, submit-batch, keys, register-kem, register-stations, read-report, deposit, pay, withdraw, claim, bad-batch, receipt, audit, snapshot) | Claude | **Ran every on-chain step on his own machine with his own keys**; reported outputs and errors back |
+| ZK reconciliation proof | `zk/circuits/reconcile.circom`, `zk/src/prove.ts`, `zk/scripts/*` | Claude | Chose ZK after the competitor review; set the hard cut-off date; ran the 90-proof dataset check |
+| Solidity contracts | `evm/contracts/` (generated Groth16 verifier, `PayoutGate`, `PayoutGateV2`, `PayoutGateV3`, test mock), `evm/test/` | Claude | Asked for the post-quantum signature check and for joining the rollup to the payout; deployed and ran every claim on testnet with his own keys |
+| EVM tooling | `evm/scripts/*` (probes, deploy, claim v1–v3), `evm/scripts/lib/` | Claude | Ran the precompile probes and all deployments; registered the deployer address on the fest page |
+| Leaf v3 (ZK commitment inside the signed rollup leaf) | `src/crypto.ts`, `rollup/src/post-report.ts`, `rollup/src/audit.ts` | Claude | Posted the v3 report and ran the auditor on testnet |
+| Demo clips and video script | evidence cards and clip edits (from on-chain data and Joel's screen recordings); script in the team's notes | Claude | Joel recorded the terminal and owner view; Thehaneul owns the final video, voiceover and edit |
 | Dashboard and hosting | `dashboard/`, `.github/workflows/` | Claude | Enabled GitHub Pages; reviewed the UI |
 | Tests and CI | `test/`, `.github/workflows/ci.yml` | Claude | Reviewed |
 | Docs | `README.md`, `docs/THREAT_MODEL.md`, `docs/TESTNET_LOG.md`, this file | Claude | Positioning, edits, and the independence requirement |
@@ -38,6 +44,12 @@ LedgerPump is built with an AI-native workflow. This file is kept up to date as 
 - **Rejected batches were invisible.** The chain's batch list omits rejected batches, so the watchtower missed the forged batch. We now walk every index, and keep forged batches on record because the chain reuses their index.
 - **An overclaim corrected.** The AI suggested LedgerPump might be the first live rollup on QoreChain. Checking on-chain showed other teams' rollups were already active, so the claim was dropped.
 - **Honest attribution.** The forged batch was challenged by an independent network challenger, not our watchtower, and every document says so.
+- **CI was red for a day without anyone noticing.** Adding the Hardhat tests under `evm/` meant vitest also tried to run them, and CI's Node 20 was too old for the vitest reporter. We found it while adding leaf v3. We scoped vitest to `test/`, moved CI to Node 22, and gave the contracts their own CI job.
+- **Scripts that never exited.** The ZK prover's worker threads kept Node alive, so `claim` and later `post-report` hung after succeeding. The first time, it looked like a stuck transaction. Both scripts now exit explicitly.
+- **A stale claim in the README.** After everything was proven on testnet, the README still said the on-chain parts weren't verified yet. We caught it in the README rewrite.
+- **Video script vs footage.** The script narrated Northgate's 630 L on Nov 8 over a clip that actually shows Riverside's ₦447,687 cash gap on Nov 12. We caught it while merging the clips and rewrote the voiceover to match the footage.
+- **Gas figures.** Both PayoutGateV2 claims report exactly 750,000 gas, half the limit we set. That looks like the chain's minimum-gas floor, not the real cost, so we log it as a floor instead of quoting it as the contract's cost.
+- **The fest checker didn't see our EVM work.** The contracts were deployed from a third account (derived from the same recovery phrase), which wasn't listed on the project, so the Ship Weeks check rejected the deployment. We added the address to the project, and the checker then counted it.
 
 ## Human contribution
 

@@ -51,3 +51,28 @@ Deployer: `0x5864884ab6449F77d926F3787218Cb516652b30A` (`qor1tpjgsj4kgj0h0kfx7du
 | 2026-11-23 10:09 | **Claim REFUSED on-chain:** NGT-LAG-01 2026-11-08, the 600 L theft day. The proof is valid but proves `reconciled = 0`, so the contract reverts with `NotReconciled`. No payout | `0xac57ca44abccc1ad8d63cd8616398fccdf85eb6a9cc55ee0c61db2969985fb8a` | 10608396 | ✅ reverted as designed (gas 300,000) |
 
 This closes the gap in threat T8: for claims through `PayoutGate`, "pay only reconciled days" is enforced by the chain, not by the operator's goodwill.
+
+## Post-quantum authorised settlement: PayoutGateV2 (23 Nov)
+
+`PayoutGateV2` pays a station-day only if **both** checks pass on-chain:
+1. the Groth16 proof says the day reconciled;
+2. the station's own ML-DSA-87 key signed this exact claim, checked by QoreChain's `pqcVerify` precompile (`0x…0A01`).
+
+The key must hash (SHA-256) to the fingerprint registered for the station. It's the same key that signs the station's rollup leaves.
+
+**Precompile probe first** (`npm run pqc-probe`, read-only `eth_call`):
+- ML-DSA-87: a valid signature returns `true`; a tampered signature or a different message returns `false`; about 312k gas.
+- ML-DSA-65/44 signatures return `false`.
+- `pqcKeyStatus` of the deployer: registered, algorithm 1, 2,592-byte key.
+
+| Date (UTC) | Step | Tx hash | Block | Result |
+|---|---|---|---|---|
+| 2026-11-23 | EVM authorisation window opened (2,400 blocks, 15 txs, 5 QOR) | `BAF1ED8E86E3B11D23C4D88B681A2DDD3D114995B9EF456D9A2FEE3C9497C21C` | — | ✅ |
+| 2026-11-23 | `PayoutGateV2` deployed at `0x706b8137f170ea31661ff1e6f4e0e2b75ecc416f` (reuses verifier `0x7dce…b079`; pqcVerify `0x…0a01`), funded with 1 QOR, 0.1 QOR per day | `0xbcae170deed8bcb81d2387f5e5b475161782dffbcb0a6a5261e9cc0aba022629` | — | ✅ gas 924,153 |
+| 2026-11-23 | NGT-LAG-01 registered: payee `0x4620…0078`, key SHA-256 `05f81413251ea5bf…` | `0x4ccdc625bf5c31b839378af725ae5983686006d882fa895f8a5327e2df569240` | — | ✅ |
+| 2026-11-23 | RVS-BEN-01 registered: payee `0x661D…1e44`, key SHA-256 `6dd540c6b02d02c2…` | `0xbcac3263037f9761d0e5cd4a06610be461c96e28b5cd10192c886fccd10a19b8` | — | ✅ |
+| 2026-11-23 | HLT-AKR-01 registered: payee `0xcC3a…6E17`, key SHA-256 `cea7d9535d2a0b0f…` | `0xaaba31779e96d0a3e649356d094928fbd11f7363e41bfc1b959075984e03820e` | — | ✅ |
+| 2026-11-23 | **Claim PAID:** NGT-LAG-01 2026-11-02. ZK proof (`reconciled = 1`) + station ML-DSA-87 signature (4,627 B) both verified on-chain; 0.1 QOR to the payee | `0xe1d82c7b705e8f36bb6fe407d2193a68a07acc2ce50f00044255d722f828406d` | 10610926 | ✅ |
+| 2026-11-23 | **Claim REFUSED on-chain:** NGT-LAG-01 2026-11-03, a reconciled day with a valid proof, but one byte of the station's signature was flipped (`--forge-sig`). `pqcVerify` returned false, and the contract reverted with `BadStationSignature` | `0xdd2b65fa1c5feec0ec63684a947ea65c9217be4229b8b6cf2761c61bc437e099` | 10610980 | ✅ reverted as designed |
+
+Both claims report 750,000 gas, exactly half the 1.5M limit the script sets. That looks like the chain's minimum-gas floor (it charges at least half the limit), not the real execution cost. Local execution with a mock precompile used about 452k gas before the ML-DSA-87 check.

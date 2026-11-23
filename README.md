@@ -32,6 +32,7 @@ Fuel station owners lose money in the gap between what the pumps sold, what the 
 | Payouts: deposit → treasury pays reconciled station-days (qledger ML-DSA-44 transfers) → station withdrawal → execute with Merkle proof after finalisation | `rollup/src/{deposit,pay,withdraw,claim}.ts` | ✅ full loop on testnet (claim tx in the testnet log) |
 | Settlement receipts: ML-DSA-87-signed batch anchors, verified against live chain state | `rollup/src/receipt.ts`, `rollup/receipts/` | ✅ verified on testnet |
 | ZK reconciliation proof (Groth16, ~10.5k constraints) + `PayoutGate` on QoreChain EVM: the chain verifies a station reconciled without seeing its books, and pays only reconciled days | `zk/`, `evm/` | ✅ on testnet: reconciled day PAID, theft day REFUSED on-chain (`NotReconciled`) |
+| Post-quantum authorised settlement: `PayoutGateV2` pays only with a ZK reconciliation proof **and** the station's ML-DSA-87 signature, checked on-chain by QoreChain's `pqcVerify` precompile | `evm/contracts/PayoutGateV2.sol` | ✅ on testnet: signed reconciled day PAID; forged signature REFUSED (`BadStationSignature`) |
 | Dashboard: public watchtower view (timeline, alerts, batches, stations) + owner view decrypted locally | `dashboard/`, `rollup/src/snapshot.ts` | ✅ |
 
 ## Quick start

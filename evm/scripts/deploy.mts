@@ -85,4 +85,4 @@ async function main() {
   console.log("\nSaved evm/deployment.json. Next: npm run claim -- NGT-LAG-01 2026-11-01");
 }
 
-main().catch((e) => { console.error(e instanceof Error ? e.message : e); process.exit(1); });
+main().then(() => process.exit(0)).catch((e) => { console.error(e instanceof Error ? e.message : e); process.exit(1); });

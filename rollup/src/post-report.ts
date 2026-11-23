@@ -95,7 +95,8 @@ async function main(): Promise<void> {
   console.log(`  posted: ${res.transactionHash} (code ${res.code}) at height ${res.height}; inbox head ${inbox.headSequence}`);
 }
 
-main().catch((err) => {
+// Exit explicitly: the ZK prover's worker threads would otherwise keep Node alive.
+main().then(() => process.exit(0)).catch((err) => {
   console.error(err instanceof Error ? err.message : err);
   process.exit(1);
 });

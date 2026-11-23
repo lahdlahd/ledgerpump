@@ -1,0 +1,22 @@
+{
+  "chainId": 9800,
+  "deployer": "0x5864884ab6449F77d926F3787218Cb516652b30A",
+  "deployerNative": "qor1tpjgsj4kgj0h0kfx7du8yxxt29n99vc24dzyta",
+  "verifier": "0x7dcec2d913ff7fb2e16f730b3e724c0ff82db079",
+  "verifierTx": "0x76fdde9017d86716f1d40e678be4910d127576dbbe1923baa60d7bc0a3dfbcc1",
+  "gate": "0xd637d36562242e4be73e6e3b14a6fe7619b7a183",
+  "gateTx": "0x90100d751d1e8bed5f9e6beaf6d249340ad5ac77f38d38a5f20118be5575aa64",
+  "payoutQor": "0.1",
+  "fundedQor": "1",
+  "payees": {
+    "NGT-LAG-01": "0x46207615281D7D0aa802A1B0Cb6e0DE1a3d30078",
+    "RVS-BEN-01": "0x661Dc37728cd0a0AE45048d331eF658fc7831e44",
+    "HLT-AKR-01": "0xcC3a805108144182D322D7A7459da45092c06E17"
+  },
+  "registerTxs": {
+    "NGT-LAG-01": "0x9606fa6c69fe17945f315868cd2be98096809c0faeea298c0136afa293c9ad22",
+    "RVS-BEN-01": "0xda66efbc0efd69798411c1198f242052371f9505063d86a6c12b5ae47d55ca26",
+    "HLT-AKR-01": "0x41fb796f4e630adcacae8f7592a6e42aa3e4e3897fdefa04e62ad965667ab24c"
+  },
+  "deployedAt": "2026-11-23T10:02:56.436Z"
+}

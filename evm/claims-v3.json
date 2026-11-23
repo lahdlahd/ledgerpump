@@ -1,0 +1,34 @@
+[
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-03",
+    "inboxSequence": 28,
+    "leafStatus": "within_tolerance",
+    "ciphertextHash": "6b7492d465f2504e03ff4aa009255454a8826dd5c85db47be2ebf2f38e9439eb",
+    "leafCommitment": "21134993180228607159285120874044879325764617193873578221918475442293331144878",
+    "proofCommitment": "18324607931728330517085737209015586439742351911938981054237685725059210517341",
+    "commitmentMatches": false,
+    "reconciled": true,
+    "tx": "0x9c6f03c2a355120cefbe89e3e09028dbdfb069aa5e0b78707c3226941219b60c",
+    "block": 10623497,
+    "status": "refused",
+    "reason": "LeafSignatureInvalid",
+    "at": "2026-11-23T16:35:16.710Z"
+  },
+  {
+    "stationId": "HLT-AKR-01",
+    "date": "2026-11-03",
+    "inboxSequence": 28,
+    "leafStatus": "within_tolerance",
+    "ciphertextHash": "6b7492d465f2504e03ff4aa009255454a8826dd5c85db47be2ebf2f38e9439eb",
+    "leafCommitment": "21134993180228607159285120874044879325764617193873578221918475442293331144878",
+    "proofCommitment": "21134993180228607159285120874044879325764617193873578221918475442293331144878",
+    "commitmentMatches": true,
+    "reconciled": true,
+    "tx": "0x5cbc9efcdce47d25b77a702c6226e2e1cc105658db6b81cd9ec814928662b696",
+    "block": 10623511,
+    "status": "paid",
+    "reason": null,
+    "at": "2026-11-23T16:35:41.278Z"
+  }
+]

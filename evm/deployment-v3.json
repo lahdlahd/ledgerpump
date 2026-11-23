@@ -1,0 +1,30 @@
+{
+  "chainId": 9800,
+  "deployer": "0x5864884ab6449F77d926F3787218Cb516652b30A",
+  "verifier": "0x7dcec2d913ff7fb2e16f730b3e724c0ff82db079",
+  "pqcVerify": "0x0000000000000000000000000000000000000a01",
+  "signedFor": {
+    "chainId": "qorechain-diana",
+    "rollupId": "ledgerpump"
+  },
+  "gate": "0xd89ea4d20f5e6a45f6b357bf2eaaf84d2d1d99ec",
+  "gateTx": "0xaafe6acedb8662d12a69426c87be191b60ebe99d7c8018a9f7c3ec1435d5bb0b",
+  "payoutQor": "0.1",
+  "fundedQor": "1",
+  "payees": {
+    "NGT-LAG-01": "0x46207615281D7D0aa802A1B0Cb6e0DE1a3d30078",
+    "RVS-BEN-01": "0x661Dc37728cd0a0AE45048d331eF658fc7831e44",
+    "HLT-AKR-01": "0xcC3a805108144182D322D7A7459da45092c06E17"
+  },
+  "keyFingerprints": {
+    "NGT-LAG-01": "0x05f81413251ea5bf900e4d12753dabc07ec78396f283dd538a8603ec110f7e01",
+    "RVS-BEN-01": "0x6dd540c6b02d02c2dbf500d4f17ce787e2596853b3cdaf1132ca65bdbeb95cc9",
+    "HLT-AKR-01": "0xcea7d9535d2a0b0f8358a1cade24d245a5e39876a5c7496891a81614ee57759e"
+  },
+  "registerTxs": {
+    "NGT-LAG-01": "0xbc263a69c3c767f1cc07fbf7c701fd7b0522a761d1073542ed7b684b83f2c3f5",
+    "RVS-BEN-01": "0x4760917456ee858d6206f77f27d29e3bb7674a5ecc21348a572aa6c154843469",
+    "HLT-AKR-01": "0x2d73e7e4082acfa15f2df1f7802b031cf66d6f81b2367f87b03c4dd18f72b884"
+  },
+  "deployedAt": "2026-11-23T16:34:41.473Z"
+}

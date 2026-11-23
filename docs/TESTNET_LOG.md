@@ -76,3 +76,26 @@ The key must hash (SHA-256) to the fingerprint registered for the station. It's 
 | 2026-11-23 | **Claim REFUSED on-chain:** NGT-LAG-01 2026-11-03, a reconciled day with a valid proof, but one byte of the station's signature was flipped (`--forge-sig`). `pqcVerify` returned false, and the contract reverted with `BadStationSignature` | `0xdd2b65fa1c5feec0ec63684a947ea65c9217be4229b8b6cf2761c61bc437e099` | 10610980 | ✅ reverted as designed |
 
 Both claims report 750,000 gas, exactly half the 1.5M limit the script sets. That looks like the chain's minimum-gas floor (it charges at least half the limit), not the real execution cost. Local execution with a mock precompile used about 452k gas before the ML-DSA-87 check.
+
+## One chain of evidence: leaf v3 + PayoutGateV3 (23 Nov)
+
+The rollup leaf a station signs now carries the ZK commitment to its figures (leaf v3). The commitment's salt travels only inside the encrypted report. `PayoutGateV3` pays only when all three hold on-chain:
+1. it can rebuild that signed leaf byte for byte with the proof's commitment;
+2. the station's ML-DSA-87 signature on it verifies through `pqcVerify` (`0x…0A01`);
+3. the Groth16 proof over the same commitment says the day reconciled.
+
+The claim script reads the signed leaf back from the rollup inbox on chain (checked against the inbox accumulator). Encrypted report → signed rollup leaf → commitment → proof → payout.
+
+| Date (UTC) | Step | Tx hash | Block | Result |
+|---|---|---|---|---|
+| 2026-11-23 | Report posted as **leaf v3**: HLT-AKR-01 2026-11-03, `within_tolerance`, ciphertext SHA-256 `6b7492d4…39eb` (4,411 B, encrypted to owner + auditor), ZK commitment `21134993180228607159…`. Inbox #28, post 4,892 B | `64AA66653A4E69544290B4BC4C4233168953EB60AA43EF9AE6DB04112ACDCBBD` | 10623376 | ✅ code 0 |
+| 2026-11-23 | **Auditor** (`qor16p7…ttg8`) decrypts #28, recomputes the Poseidon commitment from the figures and the salt inside the report: **matches the signed leaf**. 6 reports audited, 0 false statuses | read-only | — | ✅ |
+| 2026-11-23 | EVM authorisation window opened (2,400 blocks, 15 txs, 5 QOR) | `AD58AE45D79C8F57E8903E47D654C4700ED3BA2664F9EBD2F6850867DBBA901A` | — | ✅ |
+| 2026-11-23 | `PayoutGateV3` deployed at `0xd89ea4d20f5e6a45f6b357bf2eaaf84d2d1d99ec` (reuses verifier `0x7dce…b079`; pqcVerify `0x…0a01`; leaves signed for `qorechain-diana` / `ledgerpump`), funded with 1 QOR | `0xaafe6acedb8662d12a69426c87be191b60ebe99d7c8018a9f7c3ec1435d5bb0b` | — | ✅ gas 1,313,016 |
+| 2026-11-23 | Stations registered (payee + ML-DSA-87 key SHA-256): NGT-LAG-01 | `0xbc263a69c3c767f1cc07fbf7c701fd7b0522a761d1073542ed7b684b83f2c3f5` | — | ✅ |
+| 2026-11-23 | RVS-BEN-01 | `0x4760917456ee858d6206f77f27d29e3bb7674a5ecc21348a572aa6c154843469` | — | ✅ |
+| 2026-11-23 | HLT-AKR-01 | `0x2d73e7e4082acfa15f2df1f7802b031cf66d6f81b2367f87b03c4dd18f72b884` | — | ✅ |
+| 2026-11-23 | **Claim REFUSED on-chain:** HLT-AKR-01 2026-11-03 with a valid proof (`reconciled = 1`) over a *different* commitment from the one in the signed rollup leaf (`--wrong-figures`). The rebuilt leaf's signature doesn't verify, so the contract reverts with `LeafSignatureInvalid` | `0x9c6f03c2a355120cefbe89e3e09028dbdfb069aa5e0b78707c3226941219b60c` | 10623497 | ✅ reverted as designed |
+| 2026-11-23 | **Claim PAID:** HLT-AKR-01 2026-11-03, proof over the commitment in rollup leaf #28, the station's signature on that leaf verified on-chain, 0.1 QOR to the payee | `0x5cbc9efcdce47d25b77a702c6226e2e1cc105658db6b81cd9ec814928662b696` | 10623511 | ✅ |
+
+Open item: leaf #28 is in the inbox but not yet in a finalised batch. The contract can't read rollup state, so inclusion in a finalised batch is checked off-chain (the watchtower).

@@ -98,4 +98,7 @@ The claim script reads the signed leaf back from the rollup inbox on chain (chec
 | 2026-11-23 | **Claim REFUSED on-chain:** HLT-AKR-01 2026-11-03 with a valid proof (`reconciled = 1`) over a *different* commitment from the one in the signed rollup leaf (`--wrong-figures`). The rebuilt leaf's signature doesn't verify, so the contract reverts with `LeafSignatureInvalid` | `0x9c6f03c2a355120cefbe89e3e09028dbdfb069aa5e0b78707c3226941219b60c` | 10623497 | ✅ reverted as designed |
 | 2026-11-23 | **Claim PAID:** HLT-AKR-01 2026-11-03, proof over the commitment in rollup leaf #28, the station's signature on that leaf verified on-chain, 0.1 QOR to the payee | `0x5cbc9efcdce47d25b77a702c6226e2e1cc105658db6b81cd9ec814928662b696` | 10623511 | ✅ |
 
-Open item: leaf #28 is in the inbox but not yet in a finalised batch. The contract can't read rollup state, so inclusion in a finalised batch is checked off-chain (the watchtower).
+| 2026-11-23 | **Batch 4** submitted: inbox up to #28 (1 entry, Hilltop's v3 leaf). State root unchanged (`0ee9c485…e2a2`): report posts carry no transfers, so execution skips them, but the batch commits to them by data hash `b1c12276…9b2f` | `DFE634FF09BA63E3D55221EB5FC8E96FDA6968FFC7A27AA69BB9BF2BB551E7CF` | 10623591 | ✅ code 0 |
+| 2026-11-23 | Batch 4 **finalised** after the 1-hour challenge window. Settlement receipt `rollup/receipts/batch-4.json` VALID (all six checks); receipts for batches 0–4 re-verified VALID against live chain state | read-only | — | ✅ |
+
+The leaf PayoutGateV3 paid against (#28) is in a finalised batch. The contract can't read rollup state itself, so this inclusion check is done off-chain by the watchtower and the receipt.

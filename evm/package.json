@@ -10,7 +10,8 @@
     "test": "hardhat test",
     "compile": "hardhat compile",
     "deploy": "tsx scripts/deploy.mts",
-    "claim": "tsx scripts/claim.mts"
+    "claim": "tsx scripts/claim.mts",
+    "pqc-probe": "tsx scripts/pqc-probe.mts"
   },
   "keywords": [],
   "author": "",

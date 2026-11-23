@@ -8,6 +8,7 @@ import { getClient, ROLLUP_ID } from "./client.js";
 import { getSigner } from "./signer.js";
 import { exists, readBytes, readJson, secret } from "./lib/files.js";
 import { allEntries } from "./lib/l2.js";
+import { proveReport } from "../../zk/src/prove.js";
 
 // Watchtower tier 2: the AUDITOR. Runs as a separate account (rollup/.env.auditor)
 // holding its own ML-KEM-1024 key, never the operator's. For every report the
@@ -36,7 +37,7 @@ async function main(): Promise<void> {
   });
 
   console.log(`Auditor ${auditor}`);
-  let audited = 0, notForMe = 0, falseStatus = 0, exposure = 0;
+  let audited = 0, notForMe = 0, falseStatus = 0, exposure = 0, zkChecked = 0, zkMismatch = 0;
   for (const f of findings.filter((x) => x.kind === "ok" || x.kind === "discrepancy_reported")) {
     const e = entries[f.sequence - 1];
     const leaf = JSON.parse(new TextDecoder().decode(e.payload.subarray(6, 6 + new DataView(e.payload.buffer, e.payload.byteOffset).getUint16(4))));
@@ -56,9 +57,18 @@ async function main(): Promise<void> {
     if (!honest) falseStatus++;
     const bad = r.checks.filter((c) => c.status === "discrepancy").map((c) => `${c.check}${c.product ? ` ${c.product}` : ""} ${c.unit === "kobo" ? "₦" + (c.variance / 100).toLocaleString("en-NG") : c.variance + " L"}`);
     console.log(`${honest ? (r.status === "discrepancy" ? "!! " : "OK ") : "XX "} #${f.sequence} ${f.stationId} ${f.date}: signed "${leaf.status}", figures say "${r.status}"${bad.length ? ` [${bad.join("; ")}]` : ""} (ct ${sha256Hex(ct).slice(0, 8)}…)`);
+    // Leaf v3: the signed ZK commitment must be the commitment to these decrypted figures.
+    if (leaf.v === 3) {
+      zkChecked++;
+      const recomputed = report.zkSalt ? (await proveReport(report, BigInt(report.zkSalt))).commitment : undefined;
+      const same = recomputed === leaf.zkCommitment;
+      if (!same) zkMismatch++;
+      console.log(`    ${same ? "OK" : "XX"} ZK commitment in the signed leaf ${same ? "matches" : "DOES NOT match"} the decrypted figures`);
+    }
   }
   console.log(`\nAudited ${audited} reports (${notForMe} not addressed to the auditor). False statuses: ${falseStatus}. Exposure found: ₦${(exposure / 100).toLocaleString("en-NG")}.`);
-  process.exit(falseStatus ? 2 : 0);
+  if (zkChecked) console.log(`ZK commitments checked against decrypted figures: ${zkChecked}, mismatches: ${zkMismatch}.`);
+  process.exit(falseStatus || zkMismatch ? 2 : 0);
 }
 
 main().catch((err) => {

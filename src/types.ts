@@ -31,6 +31,9 @@ export interface DailyReport {
   date: string; // YYYY-MM-DD
   products: ProductReading[];
   payments: Payments;
+  /** Salt for the report's ZK commitment (leaf v3). Travels only inside the encrypted report,
+   *  so readers can recompute the commitment; never posted in the clear. */
+  zkSalt?: string;
 }
 
 export type Status = "balanced" | "within_tolerance" | "discrepancy";

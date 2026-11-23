@@ -94,3 +94,29 @@ describe("station signatures and inbox posts", () => {
     expect(decodePost(new TextEncoder().encode("hello"))).toBeUndefined();
   });
 });
+
+describe("leaf v3 (ZK commitment in the signed rollup leaf)", () => {
+  const envelope = encryptReport(ctx, { ...report, zkSalt: "12345" }, readers);
+  const v3: ReportLeaf = { ...makeLeaf(envelope), v: 3, zkCommitment: "987654321" };
+
+  it("signs and verifies, and the commitment is part of what's signed", () => {
+    const sig = signLeaf(ctx, v3, station.secretKey);
+    expect(verifyLeaf(ctx, v3, sig, station.publicKey)).toBe(true);
+    expect(verifyLeaf(ctx, { ...v3, zkCommitment: "987654322" }, sig, station.publicKey)).toBe(false);
+  });
+
+  it("a v2 signature can't be passed off as v3 (version is in the signed message)", () => {
+    const v2 = makeLeaf(envelope);
+    const sig = signLeaf(ctx, v2, station.secretKey);
+    expect(verifyLeaf(ctx, v2, sig, station.publicKey)).toBe(true);
+    expect(verifyLeaf(ctx, { ...v2, v: 3 }, sig, station.publicKey)).toBe(false);
+  });
+
+  it("round-trips through an inbox post under 6 KiB, and the salt only travels encrypted", () => {
+    const post = encodePost(v3, signLeaf(ctx, v3, station.secretKey));
+    expect(post.length).toBeLessThanOrEqual(MAX_POST_BYTES);
+    expect(decodePost(post)?.leaf).toEqual(v3);
+    expect(new TextDecoder().decode(post)).not.toContain("zkSalt");
+    expect(decryptReport(ctx, envelope, owner.member, seed(7, 64)).zkSalt).toBe("12345");
+  });
+});

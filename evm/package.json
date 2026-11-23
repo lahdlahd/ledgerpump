@@ -13,7 +13,9 @@
     "claim": "tsx scripts/claim.mts",
     "pqc-probe": "tsx scripts/pqc-probe.mts",
     "deploy-v2": "tsx scripts/deploy-v2.mts",
-    "claim-v2": "tsx scripts/claim-v2.mts"
+    "claim-v2": "tsx scripts/claim-v2.mts",
+    "deploy-v3": "tsx scripts/deploy-v3.mts",
+    "claim-v3": "tsx scripts/claim-v3.mts"
   },
   "keywords": [],
   "author": "",

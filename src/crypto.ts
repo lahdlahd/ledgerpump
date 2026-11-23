@@ -24,12 +24,16 @@ export interface RollupCtx {
 }
 
 export interface ReportLeaf {
-  v: 2;
+  /** v2: original leaf. v3: adds zkCommitment, binding the leaf to a ZK proof of reconciliation. */
+  v: 2 | 3;
   stationId: string;
   date: string;
   /** SHA-256 (hex) of the encrypted report envelope. */
   ciphertextHash: string;
   status: Status;
+  /** v3 only: Poseidon commitment (decimal) to the day's figures and a salt kept inside the
+   *  encrypted report. PayoutGateV3 pays only for a proof over this exact commitment. */
+  zkCommitment?: string;
 }
 
 export const sha256Hex = (b: Uint8Array | string) => createHash("sha256").update(b).digest("hex");
@@ -54,7 +58,7 @@ export function stationKeypair(seed: Uint8Array) {
 
 /** What a station signs: the leaf bound to one chain and one rollup. */
 export function leafSigningMessage(ctx: RollupCtx, leaf: ReportLeaf): Uint8Array {
-  return enc.encode(`ledgerpump/leaf/v2|${ctx.chainId}|${ctx.rollupId}|${canonicalJson(leaf)}`);
+  return enc.encode(`ledgerpump/leaf/v${leaf.v}|${ctx.chainId}|${ctx.rollupId}|${canonicalJson(leaf)}`);
 }
 
 export const signLeaf = (ctx: RollupCtx, leaf: ReportLeaf, secretKey: Uint8Array) =>

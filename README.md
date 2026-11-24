@@ -4,6 +4,8 @@
 
 **Trust every transaction. Reconcile every litre.**
 
+▶️ **Demo video (2:54):** https://youtu.be/dJErpyILw6c
+
 **Live dashboard:** https://lahdlahd.github.io/ledgerpump/ (public watchtower view, refreshed from QoreChain testnet) · **Fest project page:** https://build.qorechain.io/p/ledgerpump
 
 Fuel station owners in Nigeria often run stations in several cities and rely on daily reports from managers. Money leaks in the gaps: fuel leaves the tank without passing a pump, cash doesn't match the litres sold, and a delivery drops less than its waybill. By the time the owner notices, the records have been "adjusted".

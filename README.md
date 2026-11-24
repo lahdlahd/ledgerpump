@@ -109,8 +109,16 @@ The tests assert that the engine flags exactly the planted anomalies, each throu
 
 ## Credits
 
+QoreChain kits:
+- [QoreChain RDK](https://github.com/qorechain/qorechain-rdk) (`@qorechain/rdk`): the rollup, batches, fraud proofs, withdrawals, settlement receipts and ML-KEM envelopes. The `rollup/` folder starts from the `create-qorechain-rollup` custom-rollup template.
+- [QoreChain SDK](https://github.com/QoreChain) (`@qorechain/sdk`, `@qorechain/evm`): unified EVM accounts, ML-DSA-87 key registration, EVM authorisation windows and the `pqcVerify` precompile interface.
+
+Open-source libraries:
+- [@noble/post-quantum](https://github.com/paulmillr/noble-post-quantum): ML-DSA-87 and ML-KEM in TypeScript.
+- [circom](https://github.com/iden3/circom) (via `circom2`), [circomlib](https://github.com/iden3/circomlib) (Poseidon, comparators, bit decomposition; included from `node_modules`, not vendored) and [snarkjs](https://github.com/iden3/snarkjs): the ZK circuit, Groth16 setup and proofs. circomlib and snarkjs are GPL-3.0 and are used as unmodified build tools; no GPL source is copied into this repo.
+- [Hardhat](https://hardhat.org/), [solc-js](https://github.com/ethereum/solc-js), [viem](https://viem.sh/) and [Chai](https://www.chaijs.com/): Solidity build, tests and EVM client.
+- [CosmJS](https://github.com/cosmos/cosmjs) and [dotenv](https://github.com/motdotla/dotenv): chain client and local config.
 - [TypeScript](https://www.typescriptlang.org/), [tsx](https://github.com/privatenumber/tsx) and [Vitest](https://vitest.dev/): tooling.
-- [QoreChain RDK](https://github.com/qorechain/qorechain-rdk) (`@qorechain/rdk`): the `rollup/` folder starts from the `create-qorechain-rollup` custom-rollup template.
 
 Threat model: [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md). Testnet evidence: [docs/TESTNET_LOG.md](docs/TESTNET_LOG.md).
 
